@@ -5,7 +5,7 @@ const borderRadius = '10px';
 
 interface ContainerProps {
     align: string
-}
+};
 
 export const Container = styled(RectButton).attrs((p: ContainerProps) => {})`
     width: 100%;
@@ -24,7 +24,7 @@ interface ButtonTextProps {
     color: string;
     size: any;
     count: any;
-}
+};
 
 export const ButtonText = styled.Text.attrs((props: ButtonTextProps) => {})`
     color: ${({ color }: any) => color || '#fff'};

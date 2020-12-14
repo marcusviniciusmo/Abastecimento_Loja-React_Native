@@ -1,4 +1,5 @@
 import React from 'react';
+import { RectButtonProperties } from 'react-native-gesture-handler';
 import {
     Container,
     TextContainer,
@@ -6,7 +7,6 @@ import {
     Tag,
     TagText
 } from './styles';
-import { RectButtonProperties } from 'react-native-gesture-handler';
 
 interface ButtonProps extends RectButtonProperties {
     children: string;
