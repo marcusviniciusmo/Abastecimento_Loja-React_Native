@@ -1,4 +1,5 @@
 import styled from 'styled-components/native';
+import Button from '../../Components/Button';
 
 export const Container = styled.ScrollView`
   background-color: #fff;
@@ -19,4 +20,8 @@ export const Footer = styled.View`
 
 export const TextFooter = styled.Text`
   text-align: center;
+`;
+
+export const SubmitButton = styled(Button)`
+  margin-top: 5px;
 `;
