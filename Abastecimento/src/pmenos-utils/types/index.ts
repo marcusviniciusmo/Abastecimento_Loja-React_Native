@@ -17,3 +17,16 @@ export interface LogoutHandler {
 export interface ValidTokenHandler {
     (): boolean;
 };
+
+export interface IProfileContext {
+    user?: IProfile | null;
+};
+
+export interface IProfile {
+    matricula: string;
+    name: string;
+    filial: number;
+    email: string;
+    role: string;
+    permissions: Array<string>;
+}
