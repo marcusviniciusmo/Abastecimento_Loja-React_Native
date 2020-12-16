@@ -66,7 +66,7 @@ const Login: React.FC = () => {
                 Entrar
             </SubmitButton>
             <Footer>
-                <TextFooter>&copy; Copyright {new Date().getFullYear()}</TextFooter>
+                <TextFooter>Distribuição &copy; Copyright {new Date().getFullYear()}</TextFooter>
                 <TextFooter>Empreendimentos Pague Menos</TextFooter>
             </Footer>
         </Container>

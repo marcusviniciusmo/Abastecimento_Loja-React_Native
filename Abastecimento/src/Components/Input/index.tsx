@@ -20,15 +20,15 @@ const Input: React.FC<InputProps> = ({
     buttonProperties,
     ...props
 }) => (
-    <Container bordered={bordered}>
-        <IconStyled name={icon} size={20} color={'#666360'}/>
-        <TextInput placeholderTextColor='#888' {...props} />
-        {buttonProperties && (
+        <Container bordered={bordered}>
+            <IconStyled name={'user'} size={20} color={'#666360'} />
+            <TextInput placeholderTextColor='#888' {...props} />
+            {buttonProperties && (
                 <IconButton {...buttonProperties}>
                     <Icon name={buttonProperties.icon} size={25} color={'#666360'} />
                 </IconButton>
-        )}
-    </Container>
-)
+            )}
+        </Container>
+    )
 
 export default Input;
