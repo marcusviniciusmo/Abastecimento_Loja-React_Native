@@ -1,20 +1,22 @@
 import React from 'react';
 import HeaderView from '../../Components/HeaderView';
-import { Container } from './styles';
+import { ContainerPrincipal } from '../../AppStyles';
 import BarView from '../../Components/BarView';
 import TipBottomView from '../../Components/TipBottomView';
 
 const PrimeiroAcesso: React.FC = () => {
-    const tipText = 'Selecione um Centro de Distribuição para continuar'
+    const tipText = 'Selecione um Centro de Distribuição para continuar';
+    const titleHeader = 'Primeiras configurações';
+    const textBar = 'Centro de Distribuição';
 
     return (
-        <Container>
-            <HeaderView title={'Primeiras configurações'} />
+        <ContainerPrincipal>
+            <HeaderView title={titleHeader} />
             <BarView
-                text={'Centro de Distribuição'}
+                text={textBar}
             />
             <TipBottomView text={tipText}/>
-        </Container>
+        </ContainerPrincipal>
     )
 };
 

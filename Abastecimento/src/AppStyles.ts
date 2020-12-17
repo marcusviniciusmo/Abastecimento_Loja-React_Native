@@ -1,7 +1,6 @@
 import styled from 'styled-components/native';
 
-export const Container = styled.View`
+export const ContainerPrincipal = styled.View`
     background-color: #fff;
-    width: 100%;
-    height: 100%;
+    flex: 1;
 `;

@@ -21,7 +21,7 @@ const Input: React.FC<InputProps> = ({
     ...props
 }) => (
         <Container bordered={bordered}>
-            <IconStyled name={'user'} size={20} color={'#666360'} />
+            <IconStyled name={icon} size={20} color={'#666360'} />
             <TextInput placeholderTextColor='#888' {...props} />
             {buttonProperties && (
                 <IconButton {...buttonProperties}>

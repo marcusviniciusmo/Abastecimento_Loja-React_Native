@@ -6,9 +6,10 @@ export const Container = styled.View`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-bottom: 8px;
 `;
 
 export const BarText = styled.Text`
-    margin-left: 20px;
+    margin-left: 7.5%;
     font-size: 14px;
 `;
