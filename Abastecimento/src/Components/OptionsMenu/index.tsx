@@ -6,21 +6,23 @@ interface OptionsMenuProps {
     text: string;
     icon?: string;
     showButton?: boolean;
+    favoritos?: boolean;
 }
 
 const OptionsMenu: React.FC<OptionsMenuProps> = ({
     icon,
     text,
-    showButton
+    showButton,
+    favoritos
 }) => {
     return (
-        <Container>
+        <Container favoritos={favoritos}>
             <OptionsStyled>
                 {
                     icon && 
-                    <Icon name={icon} size={25} color={'#fff'}  />
+                    <Icon name={icon} size={25} color={'#fff'} />
                 }
-                <TextOptions>{text}</TextOptions>
+                <TextOptions favoritos={favoritos}>{text}</TextOptions>
                 {
                     showButton &&
                     <Icon name={'chevron-down'} size={25} color={'#fff'} />

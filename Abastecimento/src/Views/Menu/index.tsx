@@ -17,7 +17,7 @@ const Menu: React.FC = () => {
                 <BarView text={textBarFavoritos} />
                 <OptionsMenu text={'Abrir Caminhão'} />
                 <OptionsMenu text={'Consultar Caminhão'} />
-                <OptionsMenu text={'Escolher favorito'} />
+                <OptionsMenu text={'Escolher favorito'} favoritos={true} />
             </ContainerFavoritos>
             <ContainerAplicativos>
                 <BarView text={textBarApps} />
