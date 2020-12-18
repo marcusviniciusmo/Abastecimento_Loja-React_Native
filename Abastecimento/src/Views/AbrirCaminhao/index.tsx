@@ -26,6 +26,8 @@ const AbrirCaminhao: React.FC = () => {
                     icon="truck"
                     placeholder={'Placa do veículo'}
                     onChangeText={setPlacaVeiculoInput}
+                    size={25}
+                    height={60}
                     bordered
                 />
                 <WarnSwitch

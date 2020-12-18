@@ -10,6 +10,8 @@ interface buttonProperties extends TouchableOpacityProps {
 interface InputProps extends TextInputProps {
     name: string;
     icon: string;
+    size?: number;
+    height?: number;
     bordered?: boolean;
     buttonProperties?: buttonProperties;
 };
@@ -17,11 +19,13 @@ interface InputProps extends TextInputProps {
 const Input: React.FC<InputProps> = ({
     icon,
     bordered,
+    size,
+    height,
     buttonProperties,
     ...props
 }) => (
-        <Container bordered={bordered}>
-            <IconStyled name={icon} size={20} color={'#666360'} />
+        <Container bordered={bordered} height={height}>
+            <IconStyled name={icon} size={size ? size : 20} color={'#666360'} />
             <TextInput placeholderTextColor='#888' {...props} />
             {
                 buttonProperties && (

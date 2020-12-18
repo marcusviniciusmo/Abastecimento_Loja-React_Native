@@ -5,11 +5,12 @@ const borderRadius = '10px';
 
 interface ContainerProps {
     bordered: boolean;
+    height: number;
 };
 
 export const Container = styled.View.attrs((props: ContainerProps) => { })`
     width: 100%;
-    min-height: 60px;
+    height: ${({ height }: any) => height ? height : '70'}px;
     background-color: #fff;
     border: ${({ bordered }: ContainerProps) =>
         bordered ? 'solid 1px #ccc' : 'none'};
