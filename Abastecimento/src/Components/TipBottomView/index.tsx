@@ -10,7 +10,7 @@ const TipBottomView: React.FC<TipoBottomViewProps> = ({
 }) => {
     return (
         <Container>
-            <ContainerTip>
+            <ContainerTip length={text.length}>
                 <TipText>{text}</TipText>
             </ContainerTip>
         </Container>

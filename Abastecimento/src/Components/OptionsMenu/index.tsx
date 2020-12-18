@@ -46,7 +46,7 @@ const OptionsMenu: React.FC<OptionsMenuProps> = ({
                 </OptionsStyled>
             </ViewOptions>
             {
-                expandir && 
+                expandir &&
                 <SubOptionsMenu
                     options={options}
                 />

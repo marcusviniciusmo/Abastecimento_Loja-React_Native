@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ContainerPrincipal } from '../../AppStyles';
-import { ContainerFavoritos, ContainerAplicativos } from './styles';
 import HeaderView from '../../Components/HeaderView';
+import { ContainerFavoritos, ContainerAplicativos } from './styles';
 import BarView from '../../Components/BarView';
 import OptionsMenu from '../../Components/OptionsMenu';
 import {
@@ -22,7 +22,7 @@ const Menu: React.FC = () => {
         <ContainerPrincipal>
             <HeaderView title={titleHeader} />
             <ContainerFavoritos>
-                <BarView text={textBarFavoritos} />
+            <BarView text={textBarFavoritos} />
                 <OptionsMenu text={'Abrir Caminhão'} />
                 <OptionsMenu text={'Consultar Caminhão'} />
                 <OptionsMenu text={'Escolher Favorito'} favoritos={true} />

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { ContainerPrincipal } from '../../AppStyles';
 import { Container, Logo, Footer, TextFooter, SubmitButton } from './styles';
 import Input from '../../Components/Input';
 import { Alert } from 'react-native';
@@ -42,34 +43,36 @@ const Login: React.FC = () => {
     };
 
     return (
-        <Container>
-            <Logo source={require('../../assets/logo-pmenos.png')} />
-            <Input
-                name="matricula"
-                icon="user"
-                placeholder={'Matricula'}
-                onChangeText={setUserInput}
-                keyboardType={'numeric'}
-                bordered
-            />
-            <Input
-                name="password"
-                icon="lock"
-                autoCapitalize="none"
-                placeholder={'Senha'}
-                onChangeText={setPasswordInput}
-                secureTextEntry={true}
-                onSubmitEditing={logar}
-                bordered
-            />
-            <SubmitButton isLoading={singing} onPress={logar}>
-                Entrar
-            </SubmitButton>
-            <Footer>
-                <TextFooter>Distribuição &copy; Copyright {new Date().getFullYear()}</TextFooter>
-                <TextFooter>Empreendimentos Pague Menos</TextFooter>
-            </Footer>
-        </Container>
+        <ContainerPrincipal>
+            <Container>
+                <Logo source={require('../../assets/logo-pmenos.png')} />
+                <Input
+                    name="matricula"
+                    icon="user"
+                    placeholder={'Matricula'}
+                    onChangeText={setUserInput}
+                    keyboardType={'numeric'}
+                    bordered
+                />
+                <Input
+                    name="password"
+                    icon="lock"
+                    autoCapitalize="none"
+                    placeholder={'Senha'}
+                    onChangeText={setPasswordInput}
+                    secureTextEntry={true}
+                    onSubmitEditing={logar}
+                    bordered
+                />
+                <SubmitButton isLoading={singing} onPress={logar}>
+                    Entrar
+                </SubmitButton>
+                <Footer>
+                    <TextFooter>Distribuição &copy; Copyright {new Date().getFullYear()}</TextFooter>
+                    <TextFooter>Empreendimentos Pague Menos</TextFooter>
+                </Footer>
+            </Container>
+        </ContainerPrincipal>
     )
 };
 

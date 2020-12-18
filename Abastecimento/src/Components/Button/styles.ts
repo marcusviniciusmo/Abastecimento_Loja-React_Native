@@ -7,7 +7,7 @@ interface ContainerProps {
     align: string
 };
 
-export const Container = styled(RectButton).attrs((p: ContainerProps) => {})`
+export const Container = styled(RectButton).attrs((p: ContainerProps) => { })`
     width: 100%;
     height: 50px;
     background-color: #00469B;
@@ -26,10 +26,10 @@ interface ButtonTextProps {
     count: any;
 };
 
-export const ButtonText = styled.Text.attrs((props: ButtonTextProps) => {})`
+export const ButtonText = styled.Text.attrs((props: ButtonTextProps) => { })`
     color: ${({ color }: any) => color || '#fff'};
     font-size: ${({ size }: any) => size || 16}px;
-    margin-right: ${({ count }: any) => 
+    margin-right: ${({ count }: any) =>
         count > 10 ? '40' : !count ? '0' : '30'}px;
 `;
 

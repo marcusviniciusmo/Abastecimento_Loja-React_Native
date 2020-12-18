@@ -7,11 +7,11 @@ interface ContainerProps {
     bordered: boolean;
 };
 
-export const Container  = styled.View.attrs((props: ContainerProps) => {})`
+export const Container = styled.View.attrs((props: ContainerProps) => { })`
     width: 100%;
     min-height: 60px;
     background-color: #fff;
-    border: ${({ bordered }: ContainerProps) => 
+    border: ${({ bordered }: ContainerProps) =>
         bordered ? 'solid 1px #ccc' : 'none'};
     border-radius: ${borderRadius};
     flex-direction: row;
@@ -35,4 +35,4 @@ export const IconButton = styled.TouchableOpacity`
     border-radius: ${borderRadius};
     width: 60px;
     height: 60px;
-`
+`;

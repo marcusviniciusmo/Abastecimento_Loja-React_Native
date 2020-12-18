@@ -16,8 +16,8 @@ const Loading = ({ isLoading, children }: loadingProps) => {
             />
         </Container>
     ) : (
-        <>{children}</>
-    );
+            <>{children}</>
+        );
 };
 
 export default Loading;

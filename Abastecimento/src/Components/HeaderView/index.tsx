@@ -1,16 +1,27 @@
 import React from 'react';
-import { Container, TextHeaderView } from './styles';
+import { Container, TextHeaderView, StyledContainer, ButtonBack } from './styles';
+import Icon from 'react-native-vector-icons/Feather';
 
 interface HeaderViewProps {
     title: string;
+    iconBack?: string;
+    settings?: string;
 }
 
 const HeaderView: React.FC<HeaderViewProps> = ({
-    title
+    title,
+    iconBack,
+    settings
 }) => {
     return (
         <Container>
-            <TextHeaderView>{title}</TextHeaderView>
+            <StyledContainer>
+                <ButtonBack>
+                    <Icon name={iconBack} size={35} color={'#fff'} />
+                </ButtonBack>
+                <TextHeaderView>{title}</TextHeaderView>
+                <Icon name={settings} size={35} color={'#fff'} />
+            </StyledContainer>
         </Container>
     )
 }

@@ -23,12 +23,13 @@ const Input: React.FC<InputProps> = ({
         <Container bordered={bordered}>
             <IconStyled name={icon} size={20} color={'#666360'} />
             <TextInput placeholderTextColor='#888' {...props} />
-            {buttonProperties && (
-                <IconButton {...buttonProperties}>
-                    <Icon name={buttonProperties.icon} size={25} color={'#666360'} />
-                </IconButton>
-            )}
+            {
+                buttonProperties && (
+                    <IconButton {...buttonProperties}>
+                        <Icon name={buttonProperties.icon} size={25} color={'#666360'} />
+                    </IconButton>
+                )}
         </Container>
-    )
+    );
 
 export default Input;

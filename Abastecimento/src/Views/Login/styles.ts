@@ -2,8 +2,6 @@ import styled from 'styled-components/native';
 import Button from '../../Components/Button';
 
 export const Container = styled.ScrollView`
-  background-color: #fff;
-  flex: 1;
   width: 100%;
   padding: 30px;
 `;

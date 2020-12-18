@@ -26,17 +26,17 @@ const Button: React.FC<ButtonProps> = ({
     isRightButton,
     ...props
 }) => (
-    <Container {...props} align={isRightButton ? 'flex-end' : 'center'}>
-        <TextContainer>
-            <ButtonText
-                size={small ? 12 : 16}
-                count={count}
-                color={isLoading ? '#ccc' : color}>
-                {children}
-            </ButtonText>
-            {count ? <Tag><TagText>{count}</TagText></Tag> : <></>}
-        </TextContainer>
-    </Container>
-);
+        <Container {...props} align={isRightButton ? 'flex-end' : 'center'}>
+            <TextContainer>
+                <ButtonText
+                    size={small ? 12 : 16}
+                    count={count}
+                    color={isLoading ? '#ccc' : color}>
+                    {children}
+                </ButtonText>
+                {count ? <Tag><TagText>{count}</TagText></Tag> : <></>}
+            </TextContainer>
+        </Container>
+    );
 
 export default Button;
