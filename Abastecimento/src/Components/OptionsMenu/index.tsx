@@ -12,7 +12,7 @@ interface OptionsMenuProps {
     text: string;
     icon?: string;
     showButton?: boolean;
-    favoritos?: boolean;
+    isFavorito?: boolean;
     options?: Array<OptionsProps>;
 }
 
@@ -20,20 +20,20 @@ const OptionsMenu: React.FC<OptionsMenuProps> = ({
     icon,
     text,
     showButton,
-    favoritos,
+    isFavorito,
     options
 }) => {
     const [expandir, setExpandir] = useState(false);
 
     return (
         <Container>
-            <ViewOptions favoritos={favoritos}>
+            <ViewOptions isFavorito={isFavorito}>
                 <OptionsStyled>
                     {
                         icon &&
                         <Icon name={icon} size={25} color={'#fff'} />
                     }
-                    <TextOptions favoritos={favoritos}>{text}</TextOptions>
+                    <TextOptions isFavorito={isFavorito}>{text}</TextOptions>
                     {
                         showButton && (
                             <ButtonExpand onPress={() => {

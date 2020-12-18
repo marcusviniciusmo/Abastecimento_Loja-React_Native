@@ -18,14 +18,25 @@ const Menu: React.FC = () => {
     const textBarFavoritos = 'Favoritos';
     const textBarApps = 'Aplicativos';
 
+    const favoritos = [{
+        idOptions: 1,
+        descricaoOptions: 'Abrir caminhão',
+        categoriaMenu: 'Expedição'
+    },
+    {
+        idOptions: 6,
+        descricaoOptions: 'Consultar caminhão',
+        categoriaMenu: 'Expedição'
+    }]
+
     return (
         <ContainerPrincipal>
             <HeaderView title={titleHeader} />
             <ContainerFavoritos>
             <BarView text={textBarFavoritos} />
-                <OptionsMenu text={'Abrir Caminhão'} />
-                <OptionsMenu text={'Consultar Caminhão'} />
-                <OptionsMenu text={'Escolher Favorito'} favoritos={true} />
+                <OptionsMenu text={favoritos[0].descricaoOptions} />
+                <OptionsMenu text={favoritos[1].descricaoOptions} />
+                <OptionsMenu text={'Escolher Favorito'} isFavorito={true} />
             </ContainerFavoritos>
             <ContainerAplicativos>
                 <BarView text={textBarApps} />

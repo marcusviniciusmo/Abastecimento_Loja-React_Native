@@ -2,15 +2,15 @@ import { Icon } from 'react-native-vector-icons/Icon';
 import styled from 'styled-components/native';
 
 interface FavoritosProps {
-    favoritos: boolean;
+    isFavorito: boolean;
 };
 
 export const Container = styled.ScrollView`
 `;
 
-export const ViewOptions = styled.View.attrs((favoritos: FavoritosProps) => { })`
-    background-color: ${({ favoritos }: any) => favoritos ? '#fff' : '#0054A6'} ;
-    border: ${({ favoritos }: any) => favoritos ? '1px solid #0054A6' : 'none'} ;
+export const ViewOptions = styled.View.attrs((isFavorito: FavoritosProps) => { })`
+    background-color: ${({ isFavorito }: any) => isFavorito ? '#fff' : '#0054A6'} ;
+    border: ${({ isFavorito }: any) => isFavorito ? '1px solid #0054A6' : 'none'} ;
     height: 50px;
     width: 85%;
     border-radius: 8px;
@@ -26,8 +26,8 @@ export const OptionsStyled = styled.View`
     align-items: center;
 `;
 
-export const TextOptions = styled.Text.attrs((favoritos: FavoritosProps) => { })`
-    color: ${({ favoritos }: any) => favoritos ? '#0054A6' : '#fff'};
+export const TextOptions = styled.Text.attrs((isFavorito: FavoritosProps) => { })`
+    color: ${({ isFavorito }: any) => isFavorito ? '#0054A6' : '#fff'};
     text-align: center;
     font-size: 14px;
     flex: 1;
