@@ -9,7 +9,8 @@ import WarnSwitch from '../../Components/WarnSwitch';
 const AbrirCaminhao: React.FC = () => {
     const titleHeader = 'Abrir Caminhão';
     const tipText = 'Informe a Placa do veículo para continuar';
-    const warnText = 'Deseja reabrir o caminhão?'
+    const warnTextOff = 'Deseja reabrir o caminhão?'
+    const warnTextOn = 'Sim, desejo reabrir o caminhão.'
 
     const [placaVeiculoInput, setPlacaVeiculoInput] = useState('');
 
@@ -31,7 +32,8 @@ const AbrirCaminhao: React.FC = () => {
                     bordered
                 />
                 <WarnSwitch
-                    text={warnText}
+                    textOff={warnTextOff}
+                    textOn={warnTextOn}
                 />
             </Container>
             <TipBottomView text={tipText} />

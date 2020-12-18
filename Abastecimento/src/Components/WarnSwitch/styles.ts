@@ -11,7 +11,9 @@ export const Container = styled.View`
     left: -5px;
 `;
 
-export const TextWarn = styled.Text`
+export const TextWarn = styled.Text.attrs((on: boolean) => { })`
     color: #A5A5A5;
     font-size: 15px;
+    font-weight: ${({ on }: any) => on ? 'bold' : 'normal'};
+    margin-left: ${({ on }: any) => on ? '15px' : 0};
 `;
