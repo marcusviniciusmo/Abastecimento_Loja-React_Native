@@ -17,12 +17,8 @@ const SubOptionsMenu: React.FC<SubOptionsMenuProps> = ({
         <View>
             {
                 options.map((o) => {
-                    console.log('options.length')
-                    console.log(options.length)
-                    console.log('o.idOptions')
-                    console.log(o.idOptions)
                     return (
-                        <Container key={o.idOptions}>
+                        <Container key={o.idOptions} id={o.idOptions} options={options}>
                             <TextOptionsSubMenu>
                                 {o.descricaoOptions}
                             </TextOptionsSubMenu>
