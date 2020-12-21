@@ -24,6 +24,10 @@ export const IconStyled = styled(Icon)`
     margin: 0 16px;
 `;
 
+export const IconStyledRight = styled(Icon)`
+    margin: 0 16px;
+`;
+
 export const TextInput = styled.TextInput`
     flex: 1;
     color: #333;

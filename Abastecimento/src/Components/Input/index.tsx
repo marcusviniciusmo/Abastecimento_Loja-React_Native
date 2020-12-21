@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, IconStyled, TextInput, IconButton } from './styles';
+import { Container, IconStyled, IconStyledRight, TextInput, IconButton } from './styles';
 import { TextInputProps, TouchableOpacityProps } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 
@@ -10,6 +10,7 @@ interface buttonProperties extends TouchableOpacityProps {
 interface InputProps extends TextInputProps {
     name: string;
     icon: string;
+    iconRight?: string;
     size?: number;
     height?: number;
     bordered?: boolean;
@@ -18,6 +19,7 @@ interface InputProps extends TextInputProps {
 
 const Input: React.FC<InputProps> = ({
     icon,
+    iconRight,
     bordered,
     size,
     height,
@@ -27,6 +29,10 @@ const Input: React.FC<InputProps> = ({
         <Container bordered={bordered} height={height}>
             <IconStyled name={icon} size={size ? size : 20} color={'#666360'} />
             <TextInput placeholderTextColor='#888' {...props} />
+            {
+                iconRight &&
+                <IconStyledRight name={iconRight} size={size ? size : 20} color={'#666360'}/>
+            }
             {
                 buttonProperties && (
                     <IconButton {...buttonProperties}>

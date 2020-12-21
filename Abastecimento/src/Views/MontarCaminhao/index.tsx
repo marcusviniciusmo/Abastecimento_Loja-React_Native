@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { ContainerPrincipal } from '../../AppStyles';
+import { ContainerPrincipal, Container } from '../../AppStyles';
 import HeaderView from '../../Components/HeaderView';
-import { Container } from './styles';
 import Input from '../../Components/Input';
 import TipBottomView from '../../Components/TipBottomView';
 import TagToInsert from '../../Components/TagToInsert';

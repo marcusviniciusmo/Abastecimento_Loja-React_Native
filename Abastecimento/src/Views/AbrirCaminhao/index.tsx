@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import { ContainerPrincipal } from '../../AppStyles';
+import { ContainerPrincipal, Container } from '../../AppStyles';
 import HeaderView from '../../Components/HeaderView';
 import Input from '../../Components/Input';
 import TipBottomView from '../../Components/TipBottomView';
-import { Container } from './styles';
 import WarnSwitch from '../../Components/WarnSwitch';
 
 const AbrirCaminhao: React.FC = () => {
