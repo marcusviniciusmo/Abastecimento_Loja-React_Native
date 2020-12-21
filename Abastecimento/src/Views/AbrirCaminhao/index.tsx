@@ -11,6 +11,8 @@ const AbrirCaminhao: React.FC = () => {
     const tipText = 'Informe a Placa do veículo para continuar';
     const warnTextOff = 'Deseja reabrir o caminhão?'
     const warnTextOn = 'Sim, desejo reabrir o caminhão.'
+    const size = 25;
+    const height = 70;
 
     const [placaVeiculoInput, setPlacaVeiculoInput] = useState('');
 
@@ -27,8 +29,8 @@ const AbrirCaminhao: React.FC = () => {
                     icon="truck"
                     placeholder={'Placa do veículo'}
                     onChangeText={setPlacaVeiculoInput}
-                    size={25}
-                    height={60}
+                    size={size}
+                    height={height}
                     bordered
                 />
                 <WarnSwitch
