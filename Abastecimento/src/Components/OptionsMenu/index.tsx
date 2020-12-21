@@ -6,6 +6,7 @@ import SubOptionsMenu from '../SuOptionsMenu';
 interface OptionsProps {
     idOptions: number;
     descricaoOptions: string;
+    categoriaMenu: string;
 }
 
 interface OptionsMenuProps {
