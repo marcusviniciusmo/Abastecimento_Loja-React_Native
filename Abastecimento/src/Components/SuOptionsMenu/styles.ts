@@ -12,8 +12,9 @@ export const Container = styled.View.attrs((id: number, options: any) => {
     border-radius: ${({ id, options }: any) => id === options.length ? '5' : 0}px;
 `;
 
-export const TextOptionsSubMenu = styled.Text`
-    color: #0054A6;
+export const TextOptionsSubMenu = styled.Text.attrs((options: any, id: number, categoria: string) => {
+ })`
+    color: ${({ options, id, categoria }: any) => (options.length === id  && categoria === 'Configuracoes') ? '#F00' : '#0054A6'};
     text-align: center;
     display: flex;
     flex-direction: column;

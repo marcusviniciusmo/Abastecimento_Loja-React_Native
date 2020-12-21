@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { ContainerPrincipal } from '../../AppStyles';
 import HeaderView from '../../Components/HeaderView';
-import { ContainerFavoritos, ContainerAplicativos } from './styles';
+import { Container, ContainerFavoritos, ContainerAplicativos } from './styles';
 import BarView from '../../Components/BarView';
 import OptionsMenu from '../../Components/OptionsMenu';
 import {
@@ -27,10 +26,10 @@ const Menu: React.FC = () => {
         idOptions: 6,
         descricaoOptions: 'Consultar caminhão',
         categoriaMenu: 'Expedição'
-    }]
+    }];
 
     return (
-        <ContainerPrincipal>
+        <Container>
             <HeaderView title={titleHeader} />
             <ContainerFavoritos>
             <BarView text={textBarFavoritos} />
@@ -77,7 +76,7 @@ const Menu: React.FC = () => {
                     options={OptionsConfiguracoes}
                 />
             </ContainerAplicativos>
-        </ContainerPrincipal>
+        </Container>
     )
 };
 

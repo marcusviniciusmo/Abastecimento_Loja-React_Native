@@ -115,8 +115,13 @@ export const OptionsArmazenamento = [{
 ];
 
 export const OptionsConfiguracoes = [{
-        idOptions: 0,
-        descricaoOptions: '',
-        categoriaMenu: ''
-    }
+        idOptions: 1,
+        descricaoOptions: 'Alterar centro de distribuição',
+        categoriaMenu: 'Configuracoes'
+    },
+    {
+        idOptions: 2,
+        descricaoOptions: 'Deslogar',
+        categoriaMenu: 'Configuracoes'
+    },
 ];

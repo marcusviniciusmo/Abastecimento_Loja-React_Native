@@ -4,6 +4,7 @@ import { Container, TextOptionsSubMenu, View } from './styles';
 interface OptionsProps {
     idOptions: number;
     descricaoOptions: string;
+    categoriaMenu: string;
 }
 
 interface SubOptionsMenuProps {
@@ -19,7 +20,7 @@ const SubOptionsMenu: React.FC<SubOptionsMenuProps> = ({
                 options.map((o) => {
                     return (
                         <Container key={o.idOptions} id={o.idOptions} options={options}>
-                            <TextOptionsSubMenu>
+                            <TextOptionsSubMenu options={options} id={o.idOptions} categoria={o.categoriaMenu}>
                                 {o.descricaoOptions}
                             </TextOptionsSubMenu>
                         </Container>
