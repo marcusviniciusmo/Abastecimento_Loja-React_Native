@@ -7,7 +7,7 @@ interface WarnSwitchProps {
     textOn: string;
 }
 
-const WarnSwitch: React.FC<WarnSwitchProps> = ({
+const WarningSwitch: React.FC<WarnSwitchProps> = ({
     textOff,
     textOn
 }) => {
@@ -23,4 +23,4 @@ const WarnSwitch: React.FC<WarnSwitchProps> = ({
     )
 };
 
-export default WarnSwitch;
+export default WarningSwitch;

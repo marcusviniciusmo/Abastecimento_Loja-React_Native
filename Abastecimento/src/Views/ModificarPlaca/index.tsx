@@ -5,46 +5,45 @@ import Input from '../../Components/Input';
 import TipBottomView from '../../Components/TipBottomView';
 import { sizeDefaultInput, heightDefaultInput } from '../../Utils';
 
-const EmbacarCaminhao: React.FC = () => {
-    const headerText = 'Embarcar Caminhão';
-    const tipText = 'Informe todos os campos para continuar'
+const ModificarPlaca: React.FC = () => {
+    const headerText = 'Modificar Placa';
+    const tipText = 'Informe todos os campos para continuar';
 
-    const [placaVeiculoInput, setPlacaVeiculoInput] = useState('');
-    const [manifestoCarga, setManifestoCarga] = useState('');
+    const [placaAtual, setPlacaAtual] = useState('');
+    const [novaPlaca, setNovaPlaca] = useState('');
 
     return (
         <ContainerPrincipal>
             <HeaderView
-                    title={headerText}
-                    iconBack='arrow-left'
-                    settings='more-vertical'
-                />
+                title={headerText}
+                iconBack='arrow-left'
+                settings='more-vertical'
+            />
             <Container>
                 <Input
-                    name='placa-veiculo'
-                    icon='truck'
-                    placeholder={'Placa do veículo'}
-                    onChangeText={setPlacaVeiculoInput}
+                    name='placa-atual'
+                    icon='hash'
+                    placeholder={'Placa atual'}
+                    onChangeText={setPlacaAtual}
                     size={sizeDefaultInput}
                     height={heightDefaultInput}
                     bordered
                 />
                 <Input
-                    name='manifesto-carga'
+                    name='nova-placa'
                     icon='hash'
-                    iconRight='camera'
-                    placeholder={'Manifesto da Carga'}
-                    onChangeText={setManifestoCarga}
+                    placeholder={'Nova placa'}
+                    onChangeText={setNovaPlaca}
                     size={sizeDefaultInput}
                     height={heightDefaultInput}
                     bordered
                 />
             </Container>
-            <TipBottomView 
+            <TipBottomView
                 text={tipText}
             />
         </ContainerPrincipal>
     )
 };
 
-export default EmbacarCaminhao;
+export default ModificarPlaca;

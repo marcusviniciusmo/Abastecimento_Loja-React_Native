@@ -3,15 +3,14 @@ import { ContainerPrincipal, Container } from '../../AppStyles';
 import HeaderView from '../../Components/HeaderView';
 import Input from '../../Components/Input';
 import TipBottomView from '../../Components/TipBottomView';
-import WarnSwitch from '../../Components/WarnSwitch';
+import WarningSwitch from '../../Components/WarningSwitch';
+import { sizeDefaultInput, heightDefaultInput } from '../../Utils';
 
 const AbrirCaminhao: React.FC = () => {
     const titleHeader = 'Abrir Caminhão';
     const tipText = 'Informe a Placa do veículo para continuar';
     const warnTextOff = 'Deseja reabrir o caminhão?'
     const warnTextOn = 'Sim, desejo reabrir o caminhão.'
-    const size = 25;
-    const height = 70;
 
     const [placaVeiculoInput, setPlacaVeiculoInput] = useState('');
 
@@ -28,11 +27,11 @@ const AbrirCaminhao: React.FC = () => {
                     icon="truck"
                     placeholder={'Placa do veículo'}
                     onChangeText={setPlacaVeiculoInput}
-                    size={size}
-                    height={height}
+                    size={sizeDefaultInput}
+                    height={heightDefaultInput}
                     bordered
                 />
-                <WarnSwitch
+                <WarningSwitch
                     textOff={warnTextOff}
                     textOn={warnTextOn}
                 />

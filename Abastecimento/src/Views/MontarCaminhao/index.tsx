@@ -4,12 +4,11 @@ import HeaderView from '../../Components/HeaderView';
 import Input from '../../Components/Input';
 import TipBottomView from '../../Components/TipBottomView';
 import TagToInsert from '../../Components/TagToInsert';
+import { sizeDefaultInput, heightDefaultInput } from '../../Utils';
 
 const MontarCaminhao: React.FC = () => {
     const titleHeader = 'Montar Caminhão';
     const tipText = 'Informe todos os campos para continuar';
-    const size = 25;
-    const height = 60;
 
     const [placaVeiculoInput, setPlacaVeiculoInput] = useState('');
     const [numeroPedidoInput, setNumeroPedidoInput] = useState('');
@@ -29,8 +28,8 @@ const MontarCaminhao: React.FC = () => {
                     icon="truck"
                     placeholder={'Placa do veículo'}
                     onChangeText={setPlacaVeiculoInput}
-                    size={size}
-                    height={height}
+                    size={sizeDefaultInput}
+                    height={heightDefaultInput}
                     bordered
                 />
                 <Input
@@ -38,8 +37,8 @@ const MontarCaminhao: React.FC = () => {
                     icon="hash"
                     placeholder={'Número do pedido'}
                     onChangeText={setNumeroPedidoInput}
-                    size={size}
-                    height={height}
+                    size={sizeDefaultInput}
+                    height={heightDefaultInput}
                     bordered
                 />
                 <Input
@@ -47,8 +46,8 @@ const MontarCaminhao: React.FC = () => {
                     icon="home"
                     placeholder={'Filial'}
                     onChangeText={setFilialInput}
-                    size={size}
-                    height={height}
+                    size={sizeDefaultInput}
+                    height={heightDefaultInput}
                     bordered
                 />
                 <Input
@@ -56,8 +55,8 @@ const MontarCaminhao: React.FC = () => {
                     icon="plus"
                     placeholder={'Inserir etiqueta'}
                     onChangeText={setInserirEtiquetaInput}
-                    size={size}
-                    height={height}
+                    size={sizeDefaultInput}
+                    height={heightDefaultInput}
                     bordered
                 />
                 <TagToInsert />

@@ -3,12 +3,11 @@ import { ContainerPrincipal, Container } from '../../AppStyles';
 import HeaderView from '../../Components/HeaderView';
 import Input from '../../Components/Input';
 import TipBottomView from '../../Components/TipBottomView';
+import { sizeDefaultInput, heightDefaultInput } from '../../Utils';
 
 const FecharCaminhao: React.FC = () => {
     const headerText = 'Fechar Caminhão';
     const tipText = 'Informe a Placa do Veículo para continuar';
-    const size = 25;
-    const height = 60;
 
     const [placaVeiculoInput, setPlacaVeiculoInput] = useState('');
 
@@ -25,8 +24,8 @@ const FecharCaminhao: React.FC = () => {
                 icon='truck'
                 placeholder={'Placa do veículo'}
                 onChangeText={setPlacaVeiculoInput}
-                size={size}
-                height={height}
+                size={sizeDefaultInput}
+                height={heightDefaultInput}
                 bordered
             />
             </Container>
