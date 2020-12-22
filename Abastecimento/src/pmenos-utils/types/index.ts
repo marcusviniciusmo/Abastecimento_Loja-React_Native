@@ -30,3 +30,8 @@ export interface IProfile {
     role: string;
     permissions: Array<string>;
 }
+
+export interface ICentrosDistribuicao {
+    idCD: number;
+    nomeFantasiaCD: string;
+}

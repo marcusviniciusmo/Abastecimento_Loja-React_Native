@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, TextWarn } from './styles';
+import { Container, TextWarning } from './styles';
 import { Switch } from 'react-native-gesture-handler';
 
 interface WarnSwitchProps {
@@ -18,7 +18,7 @@ const WarningSwitch: React.FC<WarnSwitchProps> = ({
     return (
         <Container>
             <Switch value={isSwitchOn} onValueChange={onToggleSwitch} thumbColor={ isSwitchOn ? '#0054A6' : '#ccc'} />
-            <TextWarn on={isSwitchOn}>{isSwitchOn ? textOn : textOff}</TextWarn>
+            <TextWarning on={isSwitchOn}>{isSwitchOn ? textOn : textOff}</TextWarning>
         </Container>
     )
 };

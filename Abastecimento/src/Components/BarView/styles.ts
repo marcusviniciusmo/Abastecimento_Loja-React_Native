@@ -6,7 +6,7 @@ export const Container = styled.View`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-bottom: 8px;
+    margin-bottom: 0;
 `;
 
 export const BarText = styled.Text`
