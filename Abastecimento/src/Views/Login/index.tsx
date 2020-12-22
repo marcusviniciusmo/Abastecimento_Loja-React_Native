@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ContainerPrincipal } from '../../AppStyles';
-import { Container, Logo, Footer, TextFooter, SubmitButton } from './styles';
+import { Container, ContainerInput, Logo, Footer, TextFooter, SubmitButton } from './styles';
 import Input from '../../Components/Input';
 import { Alert } from 'react-native';
 import useAuthentication from '../../pmenos-utils/hooks/useAuthentication';
@@ -46,24 +46,26 @@ const Login: React.FC = () => {
         <ContainerPrincipal>
             <Container>
                 <Logo source={require('../../assets/logo-pmenos.png')} />
-                <Input
-                    name="matricula"
-                    icon="user"
-                    placeholder={'Matricula'}
-                    onChangeText={setUserInput}
-                    keyboardType={'numeric'}
-                    bordered
-                />
-                <Input
-                    name="password"
-                    icon="lock"
-                    autoCapitalize="none"
-                    placeholder={'Senha'}
-                    onChangeText={setPasswordInput}
-                    secureTextEntry={true}
-                    onSubmitEditing={logar}
-                    bordered
-                />
+                <ContainerInput>
+                    <Input
+                        name="matricula"
+                        icon="user"
+                        placeholder={'Matricula'}
+                        onChangeText={setUserInput}
+                        keyboardType={'numeric'}
+                        bordered
+                    />
+                    <Input
+                        name="password"
+                        icon="lock"
+                        autoCapitalize="none"
+                        placeholder={'Senha'}
+                        onChangeText={setPasswordInput}
+                        secureTextEntry={true}
+                        onSubmitEditing={logar}
+                        bordered
+                    />
+                </ContainerInput>
                 <SubmitButton isLoading={singing} onPress={logar}>
                     Entrar
                 </SubmitButton>

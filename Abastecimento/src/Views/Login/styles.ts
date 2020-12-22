@@ -6,6 +6,12 @@ export const Container = styled.ScrollView`
   padding: 30px;
 `;
 
+
+export const ContainerInput = styled.View`
+    margin-top: 30px;
+    margin-bottom: 10px;
+`;
+
 export const Logo = styled.Image`
   height: 33.5px;
   width: 288px;

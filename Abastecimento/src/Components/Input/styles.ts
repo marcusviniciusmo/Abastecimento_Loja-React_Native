@@ -10,7 +10,7 @@ interface ContainerProps {
 
 export const Container = styled.View.attrs((props: ContainerProps) => { })`
     width: 100%;
-    height: ${({ height }: any) => height ? height : '70'}px;
+    height: ${({ height }: any) => height ? height : '60'}px;
     background-color: #fff;
     border: ${({ bordered }: ContainerProps) =>
         bordered ? 'solid 1px #ccc' : 'none'};
