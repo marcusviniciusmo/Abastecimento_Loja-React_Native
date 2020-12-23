@@ -4,7 +4,6 @@ import HeaderView from '../../Components/HeaderView';
 import BarView from '../../Components/BarView';
 import TipBottomView from '../../Components/TipBottomView';
 import { ICentrosDistribuicao } from '../../pmenos-utils/types';
-import { View } from 'react-native';
 
 const PrimeiroAcesso: React.FC = () => {
     const titleHeader = 'Primeiras configurações';
@@ -34,8 +33,7 @@ const PrimeiroAcesso: React.FC = () => {
     {
         idCD: 5,
         nomeFantasiaCD: 'CD05-CONTAGEM/MG'
-    },
-    ]
+    }];
 
     return (
         <ContainerPrincipal>

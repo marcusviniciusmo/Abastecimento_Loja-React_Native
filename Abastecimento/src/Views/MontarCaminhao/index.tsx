@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ContainerPrincipal, Container } from '../../AppStyles';
 import HeaderView from '../../Components/HeaderView';
 import Input from '../../Components/Input';
@@ -61,9 +61,7 @@ const MontarCaminhao: React.FC = () => {
                 />
                 <TagToInsert />
             </Container>
-            <TipBottomView
-                text={tipText}
-            />
+            <TipBottomView text={tipText}/>
         </ContainerPrincipal>
     )
 };
