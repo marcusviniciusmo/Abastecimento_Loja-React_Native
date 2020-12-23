@@ -21,7 +21,7 @@ export const ButtonBack = styled.TouchableOpacity`
 `;
 
 export const TextHeaderView = styled.Text`
-    font-size: 17px;
+    font-size: 18px;
     color: #fff;
     text-align: center;
     flex: 1;
