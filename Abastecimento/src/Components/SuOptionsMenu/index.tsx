@@ -5,11 +5,11 @@ interface OptionsProps {
     idOptions: number;
     descricaoOptions: string;
     categoriaMenu: string;
-}
+};
 
 interface SubOptionsMenuProps {
     options?: Array<OptionsProps>;
-}
+};
 
 const SubOptionsMenu: React.FC<SubOptionsMenuProps> = ({
     options

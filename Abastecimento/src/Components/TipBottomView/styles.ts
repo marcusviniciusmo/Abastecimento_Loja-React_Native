@@ -16,7 +16,7 @@ export const Container = styled.View`
 export const ContainerTip = styled.View.attrs((length: number) => {
     length
 })`
-    width: ${({ length } : any ) => length > 50 ? '73' : '80'}%;
+    width: ${({ length } : any ) => length >= 50 ? '73' : '80'}%;
     align-self: center;
 `;
 

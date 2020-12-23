@@ -7,13 +7,15 @@ interface ContainerProps {
     align: string
 };
 
-export const Container = styled(RectButton).attrs((p: ContainerProps) => { })`
-    width: 100%;
+export const Container = styled(RectButton).attrs((p: ContainerProps, buttonConfirm: boolean) => { })`
+    width: ${({ buttonConfirm }: any ) => buttonConfirm ? '90' : '100'}%;
+    align-self: ${({ buttonConfirm }: any ) => buttonConfirm ? 'center' : 'auto'};
     height: 50px;
     background-color: #00469B;
     border-radius: ${borderRadius};
     justify-content: center;
     align-items: ${({ align }: any) => align || 'center'};
+    top: ${({ buttonConfirm }: any) => buttonConfirm ? '52%' : '0'};
 `;
 
 export const TextContainer = styled.View`

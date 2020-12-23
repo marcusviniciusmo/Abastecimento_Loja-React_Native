@@ -5,12 +5,13 @@ import Input from '../../Components/Input';
 import TipBottomView from '../../Components/TipBottomView';
 import WarningSwitch from '../../Components/WarningSwitch';
 import { sizeDefaultInput, heightDefaultInput } from '../../Utils';
+import Button from '../../Components/Button';
 
 const AbrirCaminhao: React.FC = () => {
     const titleHeader = 'Abrir Caminhão';
     const tipText = 'Informe a Placa do veículo para continuar';
-    const warnTextOff = 'Deseja reabrir o caminhão?'
-    const warnTextOn = 'Sim, desejo reabrir o caminhão.'
+    const warningTextOff = 'Deseja reabrir o caminhão?'
+    const warningTextOn = 'Sim, desejo reabrir o caminhão.'
 
     const [placaVeiculoInput, setPlacaVeiculoInput] = useState('');
 
@@ -32,11 +33,20 @@ const AbrirCaminhao: React.FC = () => {
                     bordered
                 />
                 <WarningSwitch
-                    textOff={warnTextOff}
-                    textOn={warnTextOn}
+                    textOff={warningTextOff}
+                    textOn={warningTextOn}
                 />
             </Container>
-            <TipBottomView text={tipText} />
+            {
+                !placaVeiculoInput ? 
+                    <TipBottomView text={tipText} />
+                : 
+                <Button
+                    buttonConfirm
+                >
+                    Gravar
+                </Button>
+            }
         </ContainerPrincipal>
     )
 };

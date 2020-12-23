@@ -15,6 +15,7 @@ interface ButtonProps extends RectButtonProperties {
     isLoading?: boolean;
     count?: boolean;
     isRightButton?: boolean;
+    buttonConfirm?: boolean;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -24,9 +25,10 @@ const Button: React.FC<ButtonProps> = ({
     color,
     count,
     isRightButton,
+    buttonConfirm,
     ...props
 }) => (
-        <Container {...props} align={isRightButton ? 'flex-end' : 'center'}>
+        <Container {...props} align={isRightButton ? 'flex-end' : 'center'} buttonConfirm={buttonConfirm}>
             <TextContainer>
                 <ButtonText
                     size={small ? 12 : 16}
