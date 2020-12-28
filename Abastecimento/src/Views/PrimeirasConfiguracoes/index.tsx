@@ -4,11 +4,10 @@ import HeaderView from '../../Components/HeaderView';
 import BarView from '../../Components/BarView';
 import TipBottomView from '../../Components/TipBottomView';
 import { ICentrosDistribuicao } from '../../pmenos-utils/types';
+import { title, tipText } from '../../Utils';
 
 const PrimeiroAcesso: React.FC = () => {
-    const titleHeader = 'Primeiras configurações';
     const textBar = 'Centro de Distribuição';
-    const tipText = 'Selecione um Centro de Distribuição para continuar';
 
     const [centrosDistribuicao, setCentrosDistribuicao] = useState<Array<ICentrosDistribuicao> | null>(null);
     const [centroDistribuicaoLoading, setcentroDistribuicaoLoading] = useState(true);
@@ -37,7 +36,7 @@ const PrimeiroAcesso: React.FC = () => {
 
     return (
         <ContainerPrincipal>
-            <HeaderView title={titleHeader} />
+            <HeaderView title={title.primeirasConfiguracoes} />
             <BarView
                 text={textBar}
             />
@@ -55,7 +54,7 @@ const PrimeiroAcesso: React.FC = () => {
                     })
                 }
             </>
-            <TipBottomView text={tipText} />
+            <TipBottomView text={tipText.selecione_Centro_Distribuicao} />
         </ContainerPrincipal>
     )
 };

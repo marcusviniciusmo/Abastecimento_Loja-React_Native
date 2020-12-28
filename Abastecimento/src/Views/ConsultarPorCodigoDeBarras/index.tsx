@@ -3,34 +3,29 @@ import { ContainerPrincipal, Container } from '../../AppStyles';
 import HeaderView from '../../Components/HeaderView';
 import Input from '../../Components/Input';
 import TipBottomView from '../../Components/TipBottomView';
-import { iconBack, settingsIcon, sizeDefaultInput, heightDefaultInput } from '../../Utils';
+import { iconBack, settingsIcon, title, featherIcons, placeholder, tipText } from '../../Utils';
 
-const ConsultarPorCodigoDeBarras: React.FC = () => {
-    const headerView = 'Consultar por Código de Barras';
-    const tipText = 'Informe todos os campos para continuar';
-    
+const ConsultarPorCodigoDeBarras: React.FC = () => {    
     const[codigoDeBarras, setCodigoDeBarras] = useState('');
 
     return (
         <ContainerPrincipal>
             <HeaderView
-                title={headerView}
+                title={title.consultarPorCodigoDeBarras}
                 iconBack={iconBack}
                 settings={settingsIcon}
             />
             <Container>
                 <Input
                     name='codigo-barras'
-                    icon='bar-chart-2'
-                    iconRight='camera'
-                    placeholder={'Código de Barras'}
+                    icon={featherIcons.barChart}
+                    iconRight={featherIcons.camera}
+                    placeholder={placeholder.codigoBarras}
                     onChangeText={setCodigoDeBarras}
-                    size={sizeDefaultInput}
-                    height={heightDefaultInput}
                     bordered
                 />
             </Container>
-            <TipBottomView text={tipText}/>
+            <TipBottomView text={tipText.informe_Todos_Campos}/>
         </ContainerPrincipal>
     )
 };

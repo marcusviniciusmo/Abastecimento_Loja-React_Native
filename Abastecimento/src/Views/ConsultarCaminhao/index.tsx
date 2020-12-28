@@ -3,33 +3,28 @@ import { ContainerPrincipal, Container } from '../../AppStyles';
 import HeaderView from '../../Components/HeaderView';
 import Input from '../../Components/Input';
 import TipBottomView from '../../Components/TipBottomView';
-import { sizeDefaultInput, heightDefaultInput, iconBack, settingsIcon } from '../../Utils';
+import { iconBack, settingsIcon, title, featherIcons, placeholder, tipText } from '../../Utils';
 
 const ConsultarCaminhao: React.FC = () => {
-    const headerText = 'Consultar Caminhão';
-    const tipText = 'Informe todos os campos para continuar';
-
     const [placaVeiculoInput, setPlacaVeiculoInput] = useState('');
 
     return (
         <ContainerPrincipal>
             <HeaderView
-                title={headerText}
+                title={title.consultarCaminhao}
                 iconBack={iconBack}
                 settings={settingsIcon}
             />
             <Container>
                 <Input
                     name='placa-veiculo'
-                    icon='truck'
-                    placeholder={'Placa do veículo'}
+                    icon={featherIcons.truck}
+                    placeholder={placeholder.placaVeiculo}
                     onChangeText={setPlacaVeiculoInput}
-                    size={sizeDefaultInput}
-                    height={heightDefaultInput}
                     bordered
                 />
             </Container>
-            <TipBottomView text={tipText}/>
+            <TipBottomView text={tipText.informe_Todos_Campos}/>
         </ContainerPrincipal>
     )
 };

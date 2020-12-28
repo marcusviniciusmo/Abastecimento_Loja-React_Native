@@ -4,13 +4,10 @@ import HeaderView from '../../Components/HeaderView';
 import Input from '../../Components/Input';
 import TipBottomView from '../../Components/TipBottomView';
 import WarningSwitch from '../../Components/WarningSwitch';
-import { sizeDefaultInput, heightDefaultInput } from '../../Utils';
 import Button from '../../Components/Button';
-import { iconBack, settingsIcon } from '../../Utils';
+import { iconBack, settingsIcon, title, featherIcons, tipText, placeholder } from '../../Utils';
 
 const AbrirCaminhao: React.FC = () => {
-    const titleHeader = 'Abrir Caminhão';
-    const tipText = 'Informe a Placa do veículo para continuar';
     const warningTextOff = 'Deseja reabrir o caminhão?'
     const warningTextOn = 'Sim, desejo reabrir o caminhão.'
 
@@ -19,18 +16,16 @@ const AbrirCaminhao: React.FC = () => {
     return (
         <ContainerPrincipal>
             <HeaderView
-                title={titleHeader}
+                title={title.abrirCaminhao}
                 iconBack={iconBack}
                 settings={settingsIcon}
             />
             <Container>
                 <Input
                     name="placa-veiculo"
-                    icon="truck"
-                    placeholder={'Placa do veículo'}
+                    icon={featherIcons.truck}
+                    placeholder={placeholder.placaVeiculo}
                     onChangeText={setPlacaVeiculoInput}
-                    size={sizeDefaultInput}
-                    height={heightDefaultInput}
                     bordered
                 />
                 <WarningSwitch
@@ -40,7 +35,7 @@ const AbrirCaminhao: React.FC = () => {
             </Container>
             {
                 !placaVeiculoInput ? 
-                    <TipBottomView text={tipText} />
+                    <TipBottomView text={tipText.informe_Placa} />
                 : 
                 <Button
                     buttonConfirm

@@ -4,6 +4,7 @@ import { Container, ContainerInput, Logo, Footer, TextFooter, SubmitButton } fro
 import Input from '../../Components/Input';
 import { Alert } from 'react-native';
 import useAuthentication from '../../pmenos-utils/hooks/useAuthentication';
+import { featherIcons, placeholder } from '../../Utils';
 
 const Login: React.FC = () => {
     const [userInput, setUserInput] = useState('');
@@ -48,21 +49,25 @@ const Login: React.FC = () => {
                 <Logo source={require('../../assets/logo-pmenos.png')} />
                 <ContainerInput>
                     <Input
-                        name="matricula"
-                        icon="user"
-                        placeholder={'Matricula'}
+                        name='matricula'
+                        icon={featherIcons.user}
+                        placeholder={placeholder.matricula}
                         onChangeText={setUserInput}
                         keyboardType={'numeric'}
+                        size={25}
+                        height={70}
                         bordered
                     />
                     <Input
-                        name="password"
-                        icon="lock"
+                        name='password'
+                        icon={featherIcons.lock}
                         autoCapitalize="none"
-                        placeholder={'Senha'}
+                        placeholder={placeholder.senha}
                         onChangeText={setPasswordInput}
                         secureTextEntry={true}
                         onSubmitEditing={logar}
+                        size={25}
+                        height={70}
                         bordered
                     />
                 </ContainerInput>

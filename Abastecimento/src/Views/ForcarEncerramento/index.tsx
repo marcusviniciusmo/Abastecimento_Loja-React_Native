@@ -3,12 +3,9 @@ import { ContainerPrincipal, Container } from '../../AppStyles';
 import HeaderView from '../../Components/HeaderView';
 import Input from '../../Components/Input';
 import TipBottomView from '../../Components/TipBottomView';
-import { sizeDefaultInput, heightDefaultInput, iconBack, settingsIcon } from '../../Utils';
+import { iconBack, settingsIcon, title, featherIcons, placeholder, tipText } from '../../Utils';
 
 const ForcarEncerramento: React.FC = () => {
-    const headerText = 'Forçar Encerramento';
-    const tipText = 'Informe todos os campos para continuar';
-
     const [placaVeiculo, setPlacaVeiculo] = useState('');
     const [numeroPedido, setNumeroPedido] = useState('');
     const [filial, setFilial] = useState('');
@@ -16,42 +13,34 @@ const ForcarEncerramento: React.FC = () => {
     return (
         <ContainerPrincipal>
             <HeaderView
-                title={headerText}
+                title={title.forcarEncerramento}
                 iconBack={iconBack}
                 settings={settingsIcon}
             />
             <Container>
                 <Input
                     name='placa-veiculo'
-                    icon='truck'
-                    placeholder={'Placa do veículo'}
+                    icon={featherIcons.truck}
+                    placeholder={placeholder.placaVeiculo}
                     onChangeText={setPlacaVeiculo}
-                    size={sizeDefaultInput}
-                    height={heightDefaultInput}
                     bordered
                 />
                 <Input
                     name='numero-pedido'
-                    icon='hash'
-                    placeholder={'Número do pedido'}
+                    icon={featherIcons.hash}
+                    placeholder={placeholder.numeroPedido}
                     onChangeText={setNumeroPedido}
-                    size={sizeDefaultInput}
-                    height={heightDefaultInput}
                     bordered
                 />
                 <Input
                     name='filial'
-                    icon='home'
-                    placeholder={'Filial'}
+                    icon={featherIcons.home}
+                    placeholder={placeholder.filial}
                     onChangeText={setFilial}
-                    size={sizeDefaultInput}
-                    height={heightDefaultInput}
                     bordered
                 />
             </Container>
-            <TipBottomView
-                text={tipText}
-            />
+            <TipBottomView text={tipText.informe_Todos_Campos}/>
         </ContainerPrincipal>
     )
 };

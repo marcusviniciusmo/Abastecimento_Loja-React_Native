@@ -4,12 +4,9 @@ import HeaderView from '../../Components/HeaderView';
 import Input from '../../Components/Input';
 import TipBottomView from '../../Components/TipBottomView';
 import TagToInsert from '../../Components/TagToInsert';
-import { sizeDefaultInput, heightDefaultInput, iconBack, settingsIcon } from '../../Utils';
+import { iconBack, settingsIcon, title, featherIcons, placeholder, tipText } from '../../Utils';
 
 const MontarCaminhao: React.FC = () => {
-    const titleHeader = 'Montar Caminhão';
-    const tipText = 'Informe todos os campos para continuar';
-
     const [placaVeiculoInput, setPlacaVeiculoInput] = useState('');
     const [numeroPedidoInput, setNumeroPedidoInput] = useState('');
     const [filialInput, setFilialInput] = useState('');
@@ -18,50 +15,42 @@ const MontarCaminhao: React.FC = () => {
     return (
         <ContainerPrincipal>
             <HeaderView
-                title={titleHeader}
+                title={title.montarCaminhao}
                 iconBack={iconBack}
                 settings={settingsIcon}
             />
             <Container>
                 <Input
-                    name="placa-veiculo"
-                    icon="truck"
-                    placeholder={'Placa do veículo'}
+                    name='placa-veiculo'
+                    icon={featherIcons.truck}
+                    placeholder={placeholder.placaVeiculo}
                     onChangeText={setPlacaVeiculoInput}
-                    size={sizeDefaultInput}
-                    height={heightDefaultInput}
                     bordered
                 />
                 <Input
-                    name="numero-pedido"
-                    icon="hash"
-                    placeholder={'Número do pedido'}
+                    name='numero-pedido'
+                    icon={featherIcons.hash}
+                    placeholder={placeholder.numeroPedido}
                     onChangeText={setNumeroPedidoInput}
-                    size={sizeDefaultInput}
-                    height={heightDefaultInput}
                     bordered
                 />
                 <Input
-                    name="filial"
-                    icon="home"
-                    placeholder={'Filial'}
+                    name='filial'
+                    icon={featherIcons.home}
+                    placeholder={placeholder.filial}
                     onChangeText={setFilialInput}
-                    size={sizeDefaultInput}
-                    height={heightDefaultInput}
                     bordered
                 />
                 <Input
-                    name="inserir-etiqueta"
-                    icon="plus"
-                    placeholder={'Inserir etiqueta'}
+                    name='inserir-etiqueta'
+                    icon={featherIcons.plus}
+                    placeholder={placeholder.inserirEtiqueta}
                     onChangeText={setInserirEtiquetaInput}
-                    size={sizeDefaultInput}
-                    height={heightDefaultInput}
                     bordered
                 />
                 <TagToInsert />
             </Container>
-            <TipBottomView text={tipText}/>
+            <TipBottomView text={tipText.informe_Todos_Campos}/>
         </ContainerPrincipal>
     )
 };

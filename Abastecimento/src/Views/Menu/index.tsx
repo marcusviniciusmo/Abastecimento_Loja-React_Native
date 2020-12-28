@@ -11,9 +11,9 @@ import {
     OptionsArmazenamento,
     OptionsConfiguracoes
 } from '../../Components/OptionsMenu/options';
+import { title, featherIcons } from '../../Utils';
 
 const Menu: React.FC = () => {
-    const titleHeader = 'Menu';
     const textBarFavoritos = 'Favoritos';
     const textBarApps = 'Aplicativos';
 
@@ -30,7 +30,7 @@ const Menu: React.FC = () => {
 
     return (
         <Container>
-            <HeaderView title={titleHeader} />
+            <HeaderView title={title.menu} />
             <ContainerFavoritos>
             <BarView text={textBarFavoritos} />
                 <OptionsMenu text={favoritos[0].descricaoOptions} />
@@ -40,37 +40,37 @@ const Menu: React.FC = () => {
             <ContainerAplicativos>
                 <BarView text={textBarApps} />
                 <OptionsMenu
-                    icon={'external-link'}
+                    icon={featherIcons.external_link}
                     text={'Expedição'}
                     showButton={true}
                     options={OptionsExpedicao}
                 />
                 <OptionsMenu
-                    icon={'archive'}
+                    icon={featherIcons.archive}
                     text={'Reposição'}
                     showButton={true}
                     options={OptionsReposicao}
                 />
                 <OptionsMenu
-                    icon={'truck'}
+                    icon={featherIcons.truck}
                     text={'Entrada de Mercadorias'}
                     showButton={true}
                     options={OptionsEntradaDeMercadoria}
                 />
                 <OptionsMenu
-                    icon={'upload'}
+                    icon={featherIcons.upload}
                     text={'Descarregamento'}
                     showButton={true}
                     options={OptionsDescarregamento}
                 />
                 <OptionsMenu
-                    icon={'airplay'}
+                    icon={featherIcons.airplay}
                     text={'Armazenamento'}
                     showButton={true}
                     options={OptionsArmazenamento}
                 />
                 <OptionsMenu
-                    icon={'settings'}
+                    icon={featherIcons.settings}
                     text={'Configurações'}
                     showButton={true}
                     options={OptionsConfiguracoes}

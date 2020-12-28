@@ -3,45 +3,36 @@ import { ContainerPrincipal, Container } from '../../AppStyles';
 import HeaderView from '../../Components/HeaderView';
 import Input from '../../Components/Input';
 import TipBottomView from '../../Components/TipBottomView';
-import { sizeDefaultInput, heightDefaultInput, iconBack, settingsIcon } from '../../Utils';
+import { iconBack, settingsIcon, title, featherIcons, placeholder, tipText } from '../../Utils';
 
 const ModificarPlaca: React.FC = () => {
-    const headerText = 'Modificar Placa';
-    const tipText = 'Informe todos os campos para continuar';
-
     const [placaAtual, setPlacaAtual] = useState('');
     const [novaPlaca, setNovaPlaca] = useState('');
 
     return (
         <ContainerPrincipal>
             <HeaderView
-                title={headerText}
+                title={title.modificarPlaca}
                 iconBack={iconBack}
                 settings={settingsIcon}
             />
             <Container>
                 <Input
                     name='placa-atual'
-                    icon='hash'
-                    placeholder={'Placa atual'}
+                    icon={featherIcons.hash}
+                    placeholder={placeholder.placaAtual}
                     onChangeText={setPlacaAtual}
-                    size={sizeDefaultInput}
-                    height={heightDefaultInput}
                     bordered
                 />
                 <Input
                     name='nova-placa'
-                    icon='hash'
-                    placeholder={'Nova placa'}
+                    icon={featherIcons.hash}
+                    placeholder={placeholder.novaPlaca}
                     onChangeText={setNovaPlaca}
-                    size={sizeDefaultInput}
-                    height={heightDefaultInput}
                     bordered
                 />
             </Container>
-            <TipBottomView
-                text={tipText}
-            />
+            <TipBottomView text={tipText.informe_Todos_Campos}/>
         </ContainerPrincipal>
     )
 };
