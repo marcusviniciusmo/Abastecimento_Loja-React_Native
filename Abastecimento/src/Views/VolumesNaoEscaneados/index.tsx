@@ -3,7 +3,7 @@ import { ContainerPrincipal, Container } from '../../AppStyles';
 import HeaderView from '../../Components/HeaderView';
 import Input from '../../Components/Input';
 import TipBottomView from '../../Components/TipBottomView';
-import { sizeDefaultInput, heightDefaultInput } from '../../Utils';
+import { sizeDefaultInput, heightDefaultInput, iconBack, settingsIcon } from '../../Utils';
 
 const VolumesNaoEscaneados: React.FC = () => {
     const headerText = 'Volumes Não Escaneados';
@@ -17,8 +17,8 @@ const VolumesNaoEscaneados: React.FC = () => {
         <ContainerPrincipal>
             <HeaderView
                 title={headerText}
-                iconBack='arrow-left'
-                settings='more-vertical'
+                iconBack={iconBack}
+                settings={settingsIcon}
             />
             <Container>
                 <Input

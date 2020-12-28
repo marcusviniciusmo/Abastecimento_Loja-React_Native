@@ -4,7 +4,7 @@ import HeaderView from '../../Components/HeaderView';
 import Input from '../../Components/Input';
 import TipBottomView from '../../Components/TipBottomView';
 import TagToInsert from '../../Components/TagToInsert';
-import { sizeDefaultInput, heightDefaultInput } from '../../Utils';
+import { sizeDefaultInput, heightDefaultInput, iconBack, settingsIcon } from '../../Utils';
 
 const MontarCaminhao: React.FC = () => {
     const titleHeader = 'Montar Caminhão';
@@ -19,8 +19,8 @@ const MontarCaminhao: React.FC = () => {
         <ContainerPrincipal>
             <HeaderView
                 title={titleHeader}
-                iconBack='arrow-left'
-                settings='more-vertical'
+                iconBack={iconBack}
+                settings={settingsIcon}
             />
             <Container>
                 <Input

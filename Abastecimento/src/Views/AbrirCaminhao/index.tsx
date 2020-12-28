@@ -6,6 +6,7 @@ import TipBottomView from '../../Components/TipBottomView';
 import WarningSwitch from '../../Components/WarningSwitch';
 import { sizeDefaultInput, heightDefaultInput } from '../../Utils';
 import Button from '../../Components/Button';
+import { iconBack, settingsIcon } from '../../Utils';
 
 const AbrirCaminhao: React.FC = () => {
     const titleHeader = 'Abrir Caminhão';
@@ -19,8 +20,8 @@ const AbrirCaminhao: React.FC = () => {
         <ContainerPrincipal>
             <HeaderView
                 title={titleHeader}
-                iconBack='arrow-left'
-                settings='more-vertical'
+                iconBack={iconBack}
+                settings={settingsIcon}
             />
             <Container>
                 <Input
