@@ -3,13 +3,17 @@ import { Container, ContainerTip, TipText } from './styles';
 
 interface TipoBottomViewProps {
     text: string;
+    top?: string;
+    inputAlign?: boolean;
 }
 
 const TipBottomView: React.FC<TipoBottomViewProps> = ({
-    text
+    text,
+    top,
+    inputAlign
 }) => {
     return (
-        <Container>
+        <Container top={top} inputAlign={inputAlign}>
             <ContainerTip length={text.length}>
                 <TipText>{text}</TipText>
             </ContainerTip>

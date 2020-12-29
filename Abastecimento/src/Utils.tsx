@@ -9,6 +9,7 @@ export const settingsIcon = 'more-vertical';
 export const title = {
     abrirCaminhao: 'Abrir Caminhão',
     consultarCaminhao: 'Consultar Caminhão',
+    consultarPedido: 'Consultar Pedido',
     consultarPorCodigoDeBarras: 'Consultar por Código de Barras',
     consultarPorEndereco: 'Consultar por Endereço',
     embarcarCaminhao: 'Embarcar Caminhão',
@@ -45,6 +46,7 @@ export const featherIcons = {
 export const placeholder = {
     codigoBarras: 'Código de Barras',
     data: 'Data',
+    dataPedido: 'Data do pedido',
     endereco: 'Endereço',
     filial: 'Filial',
     identificadorDaReposicao: 'Identificador da Reposição',

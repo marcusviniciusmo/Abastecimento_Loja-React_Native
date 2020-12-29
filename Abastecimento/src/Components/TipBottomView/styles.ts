@@ -1,11 +1,14 @@
 import styled from 'styled-components/native';
 
-export const Container = styled.View`
+export const Container = styled.View.attrs((top: string, inputAlign: boolean) => {
+    top
+    inputAlign
+})`
     background-color: #75808B;
     position: absolute;
-    width: 90%;
+    width:${({ inputAlign }: any) => inputAlign ? '85' : '90'}%;
     height: 60px;
-    top: 88%;
+    top: ${({ top }: any) => top ? top : '88'}%;
     border-radius: 8px;
     align-self: center;
     display: flex;
