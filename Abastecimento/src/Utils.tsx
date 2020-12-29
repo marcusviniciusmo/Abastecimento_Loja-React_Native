@@ -18,6 +18,7 @@ export const title = {
     menu: 'Menu',
     modificarPlaca: 'Modificar Placa',
     montarCaminhao: 'Montar Caminhão',
+    pedidosNaoImpressos: 'Pedidos Não Impressos',
     primeirasConfiguracoes: 'Primeiras configurações',
     volumesNaoEscaneados: 'Volumes Não Escaneados',
 };
@@ -26,6 +27,7 @@ export const featherIcons = {
     airplay: 'airplay',
     archive: 'archive',
     barChart: 'bar-chart-2',
+    calendar: 'calendar',
     camera: 'camera',
     external_link: 'external-link',
     hash: 'hash',
@@ -40,6 +42,7 @@ export const featherIcons = {
 
 export const placeholder = {
     codigoBarras: 'Código de Barras',
+    data: 'Data',
     endereco: 'Endereço',
     filial: 'Filial',
     inserirEtiqueta: 'Inserir etiqueta',
@@ -49,6 +52,7 @@ export const placeholder = {
     numeroPedido: 'Número do pedido',
     placaAtual: 'Placa atual',
     placaVeiculo: 'Placa do veículo',
+    rua: 'Rua',
     senha: 'Senha',
 };
 
