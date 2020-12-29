@@ -20,6 +20,7 @@ export const title = {
     montarCaminhao: 'Montar Caminhão',
     pedidosNaoImpressos: 'Pedidos Não Impressos',
     primeirasConfiguracoes: 'Primeiras configurações',
+    reposicaoDaLinha: 'Reposição da Linha',
     volumesNaoEscaneados: 'Volumes Não Escaneados',
 };
 

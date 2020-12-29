@@ -12,6 +12,15 @@ const AbrirCaminhao: React.FC = () => {
     const warningTextOn = 'Sim, desejo reabrir o caminhão.'
 
     const [placaVeiculoInput, setPlacaVeiculoInput] = useState('');
+    const [isSwitchOn, setIsSwitchOn] = useState(false);
+
+    const getValuewSwitch = () => {
+        return isSwitchOn;
+    };
+
+    const changeValueSwitch = () => {
+        setIsSwitchOn(!isSwitchOn);
+    };
 
     return (
         <ContainerPrincipal>
@@ -29,8 +38,9 @@ const AbrirCaminhao: React.FC = () => {
                     bordered
                 />
                 <WarningSwitch
-                    textOff={warningTextOff}
-                    textOn={warningTextOn}
+                    textWarning={getValuewSwitch() ? warningTextOn : warningTextOff}
+                    getValueSwitch={getValuewSwitch}
+                    changeValueSwitch={changeValueSwitch}
                 />
             </Container>
             {

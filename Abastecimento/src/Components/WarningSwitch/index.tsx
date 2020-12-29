@@ -3,22 +3,24 @@ import { Container, TextWarning } from './styles';
 import { Switch } from 'react-native-gesture-handler';
 
 interface WarnSwitchProps {
-    textOff: string;
-    textOn: string;
+    textWarning: string;
+    getValueSwitch: () => boolean;
+    changeValueSwitch: () => void;
 }
 
 const WarningSwitch: React.FC<WarnSwitchProps> = ({
-    textOff,
-    textOn
+    textWarning,
+    getValueSwitch,
+    changeValueSwitch
 }) => {
-    const [isSwitchOn, setIsSwitchOn] = useState(false);
+    const switchOn = getValueSwitch();
 
-    const onToggleSwitch = () => setIsSwitchOn(!isSwitchOn);
+    const onToggleSwitch = () => changeValueSwitch();
 
     return (
         <Container>
-            <Switch value={isSwitchOn} onValueChange={onToggleSwitch} thumbColor={ isSwitchOn ? '#0054A6' : '#ccc'} />
-            <TextWarning on={isSwitchOn}>{isSwitchOn ? textOn : textOff}</TextWarning>
+            <Switch value={switchOn} onValueChange={onToggleSwitch} thumbColor={ switchOn ? '#0054A6' : '#ccc'} />
+            <TextWarning on={switchOn}>{textWarning}</TextWarning>
         </Container>
     )
 };
