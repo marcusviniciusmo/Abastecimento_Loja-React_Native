@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Container, TextWarning } from './styles';
 import { Switch } from 'react-native-gesture-handler';
 
