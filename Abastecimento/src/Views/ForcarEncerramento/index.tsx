@@ -6,9 +6,9 @@ import TipBottomView from '../../Components/TipBottomView';
 import { iconBack, settingsIcon, title, featherIcons, placeholder, tipText } from '../../Utils';
 
 const ForcarEncerramento: React.FC = () => {
-    const [placaVeiculo, setPlacaVeiculo] = useState('');
-    const [numeroPedido, setNumeroPedido] = useState('');
-    const [filial, setFilial] = useState('');
+    const [placaVeiculoInput, setPlacaVeiculoInput] = useState('');
+    const [numeroPedidoInput, setNumeroPedidoInput] = useState('');
+    const [filialInput, setFilialInput] = useState('');
 
     return (
         <ContainerPrincipal>
@@ -22,21 +22,21 @@ const ForcarEncerramento: React.FC = () => {
                     name='placa-veiculo'
                     icon={featherIcons.truck}
                     placeholder={placeholder.placaVeiculo}
-                    onChangeText={setPlacaVeiculo}
+                    onChangeText={setPlacaVeiculoInput}
                     bordered
                 />
                 <Input
                     name='numero-pedido'
                     icon={featherIcons.hash}
                     placeholder={placeholder.numeroPedido}
-                    onChangeText={setNumeroPedido}
+                    onChangeText={setNumeroPedidoInput}
                     bordered
                 />
                 <Input
                     name='filial'
                     icon={featherIcons.home}
                     placeholder={placeholder.filial}
-                    onChangeText={setFilial}
+                    onChangeText={setFilialInput}
                     bordered
                 />
             </Container>

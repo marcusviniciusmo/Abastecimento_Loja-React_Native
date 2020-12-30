@@ -6,8 +6,8 @@ import TipBottomView from '../../Components/TipBottomView';
 import { title, iconBack, settingsIcon, featherIcons, placeholder, tipText } from '../../Utils';
 
 const PedidosNaoImpressos: React.FC = () => {
-    const [data, setData] = useState('');
-    const [rua, setRua] = useState('');
+    const [dataInput, setDataInput] = useState('');
+    const [ruaInput, setRuaInput] = useState('');
 
     return (
         <ContainerPrincipal>
@@ -21,14 +21,14 @@ const PedidosNaoImpressos: React.FC = () => {
                     name='data'
                     icon={featherIcons.calendar}
                     placeholder={placeholder.data}
-                    onChangeText={setData}
+                    onChangeText={setDataInput}
                     bordered
                 />
                 <Input
                     name='rua'
                     icon={featherIcons.home}
                     placeholder={placeholder.rua}
-                    onChangeText={setRua}
+                    onChangeText={setRuaInput}
                     bordered
                 />
             </Container>

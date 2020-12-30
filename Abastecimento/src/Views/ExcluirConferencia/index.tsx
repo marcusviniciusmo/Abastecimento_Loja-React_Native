@@ -1,27 +1,26 @@
 import React, { useState } from 'react';
-import { Container, ContainerPrincipal } from '../../AppStyles';
+import { ContainerPrincipal, Container } from '../../AppStyles';
 import HeaderView from '../../Components/HeaderView';
 import { title, iconBack, settingsIcon, featherIcons, placeholder, tipText } from '../../Utils';
 import Input from '../../Components/Input';
 import TipBottomView from '../../Components/TipBottomView';
 
-const FinalizarReposicao: React.FC = () => {
-    const [identificadorDaReposicaoInput, setIdentificadorDaReposicaoInput] = useState('');
+const ExcluirConferencia: React.FC = () => {
+    const [excluirConferenciaInput, setExcluirConferenciaInput] = useState('');
 
     return (
         <ContainerPrincipal>
             <HeaderView
-                title={title.finalizarReposicao}
+                title={title.excluirConferencia}
                 iconBack={iconBack}
                 settings={settingsIcon}
             />
             <Container>
                 <Input
-                    name='identificador-reposicao'
+                    name='excluir-conferencia'
                     icon={featherIcons.hash}
-                    placeholder={placeholder.identificadorDaReposicao}
-                    onChangeText={setIdentificadorDaReposicaoInput}
-                    iconRight={featherIcons.camera}
+                    placeholder={placeholder.excluirConferencia}
+                    onChangeText={setExcluirConferenciaInput}
                     bordered
                 />
             </Container>
@@ -30,4 +29,4 @@ const FinalizarReposicao: React.FC = () => {
     )
 };
 
-export default FinalizarReposicao;
+export default ExcluirConferencia;

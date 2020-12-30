@@ -8,8 +8,8 @@ import TipBottomView from '../../Components/TipBottomView';
 import BarView from '../../Components/BarView';
 
 const ConsultarPedido: React.FC = () => {
-    const [dataDoPedido, setDataDoPedido] = useState('');
-    const [rua, setRua] = useState('');
+    const [dataDoPedidoInput, setDataDoPedidoInput] = useState('');
+    const [ruaInput, setRuaInput] = useState('');
 
     return (
         <ContainerPrincipal>
@@ -23,14 +23,14 @@ const ConsultarPedido: React.FC = () => {
                     name='data-pedido'
                     icon={featherIcons.calendar}
                     placeholder={placeholder.dataPedido}
-                    onChangeText={setDataDoPedido}
+                    onChangeText={setDataDoPedidoInput}
                     bordered
                 />
                 <Input
                     name='rua'
                     icon={featherIcons.home}
                     placeholder={placeholder.rua}
-                    onChangeText={setRua}
+                    onChangeText={setRuaInput}
                     bordered
                 />
             </Container>

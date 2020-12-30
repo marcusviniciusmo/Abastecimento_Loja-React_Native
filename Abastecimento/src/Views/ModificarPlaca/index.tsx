@@ -6,8 +6,8 @@ import TipBottomView from '../../Components/TipBottomView';
 import { iconBack, settingsIcon, title, featherIcons, placeholder, tipText } from '../../Utils';
 
 const ModificarPlaca: React.FC = () => {
-    const [placaAtual, setPlacaAtual] = useState('');
-    const [novaPlaca, setNovaPlaca] = useState('');
+    const [placaAtualInput, setPlacaAtualInput] = useState('');
+    const [novaPlacaInput, setNovaPlacaInput] = useState('');
 
     return (
         <ContainerPrincipal>
@@ -21,14 +21,14 @@ const ModificarPlaca: React.FC = () => {
                     name='placa-atual'
                     icon={featherIcons.hash}
                     placeholder={placeholder.placaAtual}
-                    onChangeText={setPlacaAtual}
+                    onChangeText={setPlacaAtualInput}
                     bordered
                 />
                 <Input
                     name='nova-placa'
                     icon={featherIcons.hash}
                     placeholder={placeholder.novaPlaca}
-                    onChangeText={setNovaPlaca}
+                    onChangeText={setNovaPlacaInput}
                     bordered
                 />
             </Container>

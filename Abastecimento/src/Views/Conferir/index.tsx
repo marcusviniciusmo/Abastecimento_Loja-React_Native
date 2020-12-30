@@ -9,7 +9,7 @@ import BarView from '../../Components/BarView';
 import Card from '../../Components/Card';
 
 const Conferir: React.FC = () => {
-    const [codigoDeBarras, setCodigoDeBarras] = useState('');
+    const [codigoDeBarrasInput, setCodigoDeBarrasInput] = useState('');
 
     return (
         <ContainerPrincipal>
@@ -24,7 +24,7 @@ const Conferir: React.FC = () => {
                     icon={featherIcons.barChart}
                     iconRight={featherIcons.camera}
                     placeholder={placeholder.codigoBarras}
-                    onChangeText={setCodigoDeBarras}
+                    onChangeText={setCodigoDeBarrasInput}
                     bordered
                 />
             </Container>

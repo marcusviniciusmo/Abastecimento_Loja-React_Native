@@ -9,7 +9,7 @@ import { title, iconBack, settingsIcon, featherIcons, placeholder, tipText } fro
 const ReposicaoDaLinha: React.FC = () => {
     const textWarning = 'Urgente';
 
-    const [endereco, setEndereco] = useState('');
+    const [enderecoInput, setEnderecoInput] = useState('');
     const [isSwitchOn, setIsSwitchOn] = useState(false);
 
     const getValueSwitch = () => {
@@ -32,7 +32,7 @@ const ReposicaoDaLinha: React.FC = () => {
                     name='endereco'
                     icon={featherIcons.home}
                     placeholder={placeholder.endereco}
-                    onChangeText={setEndereco}
+                    onChangeText={setEnderecoInput}
                     bordered
                 />
                 <WarningSwitch

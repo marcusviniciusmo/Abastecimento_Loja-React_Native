@@ -6,7 +6,7 @@ import TipBottomView from '../../Components/TipBottomView';
 import { iconBack, settingsIcon, title, featherIcons, placeholder, tipText } from '../../Utils';
 
 const ConsultarPorEndereco: React.FC = () => {
-    const [endereco, setEndereco] = useState('');
+    const [enderecoInput, setEnderecoInput] = useState('');
 
     return (
         <ContainerPrincipal>
@@ -20,7 +20,7 @@ const ConsultarPorEndereco: React.FC = () => {
                     name='endereco'
                     icon={featherIcons.home}
                     placeholder={placeholder.endereco}
-                    onChangeText={setEndereco}
+                    onChangeText={setEnderecoInput}
                     bordered
                 />
             </Container>

@@ -7,7 +7,7 @@ import { iconBack, settingsIcon, title, featherIcons, placeholder, tipText } fro
 
 const EmbacarCaminhao: React.FC = () => {
     const [placaVeiculoInput, setPlacaVeiculoInput] = useState('');
-    const [manifestoCarga, setManifestoCarga] = useState('');
+    const [manifestoCargaInput, setManifestoCargaInput] = useState('');
 
     return (
         <ContainerPrincipal>
@@ -29,7 +29,7 @@ const EmbacarCaminhao: React.FC = () => {
                     icon={featherIcons.hash}
                     iconRight={featherIcons.camera}
                     placeholder={placeholder.manifestoCarga}
-                    onChangeText={setManifestoCarga}
+                    onChangeText={setManifestoCargaInput}
                     bordered
                 />
             </Container>

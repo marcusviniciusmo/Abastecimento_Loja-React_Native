@@ -6,7 +6,7 @@ import TipBottomView from '../../Components/TipBottomView';
 import { title, iconBack, settingsIcon, featherIcons, placeholder, tipText } from '../../Utils';
 
 const CriarConferencia: React.FC = () => {
-    const [identificadorConferencia, setIdentificadorConferencia] = useState('');
+    const [identificadorConferenciaInput, setIdentificadorConferenciaInput] = useState('');
 
     return (
         <ContainerPrincipal>
@@ -20,7 +20,7 @@ const CriarConferencia: React.FC = () => {
                     name='identificador-conferencia'
                     icon={featherIcons.hash}
                     placeholder={placeholder.identificadorConferencia}
-                    onChangeText={setIdentificadorConferencia}
+                    onChangeText={setIdentificadorConferenciaInput}
                     bordered
                 />
             </Container>

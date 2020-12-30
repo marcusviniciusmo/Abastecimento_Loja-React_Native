@@ -6,7 +6,7 @@ import TipBottomView from '../../Components/TipBottomView';
 import { iconBack, settingsIcon, title, featherIcons, placeholder, tipText } from '../../Utils';
 
 const ConsultarPorCodigoDeBarras: React.FC = () => {    
-    const[codigoDeBarras, setCodigoDeBarras] = useState('');
+    const[codigoDeBarrasInput, setCodigoDeBarrasInput] = useState('');
 
     return (
         <ContainerPrincipal>
@@ -21,7 +21,7 @@ const ConsultarPorCodigoDeBarras: React.FC = () => {
                     icon={featherIcons.barChart}
                     iconRight={featherIcons.camera}
                     placeholder={placeholder.codigoBarras}
-                    onChangeText={setCodigoDeBarras}
+                    onChangeText={setCodigoDeBarrasInput}
                     bordered
                 />
             </Container>
