@@ -22,6 +22,7 @@ export const title = {
     forcarEncerramento: 'Forçar Encerramento',
     menu: 'Menu',
     modificarPlaca: 'Modificar Placa',
+    modificarProdutoSemLote: 'Modificar produto sem lote',
     montarCaminhao: 'Montar Caminhão',
     pedidosNaoImpressos: 'Pedidos Não Impressos',
     primeirasConfiguracoes: 'Primeiras configurações',
@@ -65,6 +66,7 @@ export const placeholder = {
     placaVeiculo: 'Placa do veículo',
     rua: 'Rua',
     senha: 'Senha',
+    sequencialNota: 'Sequencial Nota',
 };
 
 export const tipText = {
