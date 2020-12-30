@@ -8,6 +8,7 @@ export const settingsIcon = 'more-vertical';
 
 export const title = {
     abrirCaminhao: 'Abrir Caminhão',
+    conferir: 'Conferir',
     consultarCaminhao: 'Consultar Caminhão',
     consultarPedido: 'Consultar Pedido',
     consultarPorCodigoDeBarras: 'Consultar por Código de Barras',
@@ -36,6 +37,7 @@ export const featherIcons = {
     external_link: 'external-link',
     hash: 'hash',
     home: 'home',
+    layers: 'layers',
     lock: 'lock',
     plus: 'plus',
     settings: 'settings',
@@ -64,6 +66,7 @@ export const placeholder = {
 };
 
 export const tipText = {
+    informe_Codigo_Barras: 'Informe o código de barras para continuar',
     informe_Placa: 'Informe a Placa do veículo para continuar',
     informe_Todos_Campos: 'Informe todos os campos para continuar',
     selecione_Centro_Distribuicao: 'Selecione um Centro de Distribuição para continuar',
