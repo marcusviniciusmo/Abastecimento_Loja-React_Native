@@ -10,6 +10,9 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@react-navigation/compat": "^5.3.10",
+    "@react-navigation/native": "^5.8.10",
+    "@react-navigation/stack": "^5.12.8",
     "@types/react-native-vector-icons": "^6.4.6",
     "axios": "^0.21.0",
     "jwt-decode": "^3.1.2",
@@ -17,6 +20,7 @@
     "react-native": "0.63.4",
     "react-native-gesture-handler": "^1.9.0",
     "react-native-vector-icons": "^7.1.0",
+    "react-navigation": "^4.4.3",
     "styled-components": "^5.2.1"
   },
   "devDependencies": {

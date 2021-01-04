@@ -32,6 +32,7 @@ export const title = {
 
 export const featherIcons = {
     airplay: 'airplay',
+    alertCircle: 'alert-circle',
     archive: 'archive',
     barChart: 'bar-chart-2',
     calendar: 'calendar',

@@ -4,7 +4,7 @@ import HeaderView from '../../Components/HeaderView';
 import BarView from '../../Components/BarView';
 import TipBottomView from '../../Components/TipBottomView';
 import { ICentrosDistribuicao } from '../../pmenos-utils/types';
-import { title, tipText } from '../../Utils';
+import { title, featherIcons, tipText } from '../../Utils';
 import ModalAlertaConfirmacao from '../../Components/ModalAlertaConfirmacao';
 
 const PrimeiroAcesso: React.FC = () => {
@@ -14,6 +14,8 @@ const PrimeiroAcesso: React.FC = () => {
     const [centroDistribuicaoLoading, setcentroDistribuicaoLoading] = useState(true);
     const [centroDistribuicaoSelecionado, setCentroDistribuicaoSelecionado] = useState('');
     const [showModal, setShowModal] = useState(false);
+
+    const alertText = `Você selecionou o Centro de Distribuição ${centroDistribuicaoSelecionado}. Caso precise alterar, vá no menu de configurações.`;
 
     const cds = [{
         idCD: 1,
@@ -36,8 +38,7 @@ const PrimeiroAcesso: React.FC = () => {
         nomeFantasiaCD: 'CD05-CONTAGEM/MG'
     }];
 
-    const openModal = (cd: any) => {
-        setCentroDistribuicaoSelecionado(cd)
+    const openModal = () => {
         setShowModal(true);
     };
 
@@ -48,6 +49,15 @@ const PrimeiroAcesso: React.FC = () => {
     const closeModal = () => {
         setShowModal(false);
     };
+
+    const selecionarCD = (cd: any) => {
+        setCentroDistribuicaoSelecionado(cd);
+        openModal();
+    };
+
+    const getCDSelected = () => {
+        return centroDistribuicaoSelecionado;
+    }
 
     return (
         <>
@@ -62,11 +72,11 @@ const PrimeiroAcesso: React.FC = () => {
                             {
                                 cds.map((cd) => {
                                     return (
-                                        <CentroDistribuicaoButton key={cd.idCD} onPress={() => openModal(cd.idCD)}>
-                                            <InitialCircle>
-                                                <TextCircle>{cd.idCD}</TextCircle>
+                                        <CentroDistribuicaoButton key={cd.idCD} onPress={() => selecionarCD(cd.idCD)} cd={cd.idCD} cdSelected={getCDSelected()}>
+                                            <InitialCircle cd={cd.idCD} cdSelected={getCDSelected()}>
+                                                <TextCircle cd={cd.idCD} cdSelected={getCDSelected()}>{cd.idCD}</TextCircle>
                                             </InitialCircle>
-                                            <TextExposed>{cd.nomeFantasiaCD}</TextExposed>
+                                            <TextExposed cd={cd.idCD} cdSelected={getCDSelected()}>{cd.nomeFantasiaCD}</TextExposed>
                                         </CentroDistribuicaoButton>
                                     )
                                 })
@@ -76,8 +86,8 @@ const PrimeiroAcesso: React.FC = () => {
                     </ContainerPrincipal>
                     : <ModalAlertaConfirmacao
                             titleAlert='Atenção'
-                            icon='alert-circle'
-                            text={`Você selecionou o Centro de Distribuição ${centroDistribuicaoSelecionado}. Caso precise alterar, vá no menu de configurações.`}
+                            icon={featherIcons.alertCircle}
+                            text={alertText}
                             buttonConfirm
                             textButton='Certo'
                             closeModal={closeModal}
