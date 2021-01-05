@@ -48,6 +48,7 @@ const AbrirCaminhao: React.FC = () => {
                     <TipBottomView text={tipText.informe_Placa} />
                 : 
                 <Button
+                    top='52'
                     buttonConfirm
                 >
                     Gravar
