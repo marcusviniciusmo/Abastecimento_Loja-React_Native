@@ -93,9 +93,7 @@ const PrimeiroAcesso: React.FC = () => {
                         </>
                         {
                             centroDistribuicaoSelecionado > 0
-                            ? <Button
-                                top='25'
-                                buttonConfirm>Prosseguir</Button>
+                            ? <Button>Prosseguir</Button>
                             : <TipBottomView text={tipText.selecione_Centro_Distribuicao} />
                         }
                     </ContainerPrincipal>

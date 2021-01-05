@@ -28,8 +28,8 @@ const App = () => {
     // <Login />
     // <PrimeirasConfiguracoes />
     // <Menu />
-    // <AbrirCaminhao />
-    <MontarCaminhao />
+    <AbrirCaminhao />
+    // <MontarCaminhao />
     // <FecharCaminhao />
     // <EmbarcarCaminhao />
     // <ModificarPlaca />

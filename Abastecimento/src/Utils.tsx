@@ -77,5 +77,3 @@ export const tipText = {
     informe_Todos_Campos: 'Informe todos os campos para continuar',
     selecione_Centro_Distribuicao: 'Selecione um Centro de Distribuição para continuar',
 };
-
-export const buttonConfirmTopDefault = '32';

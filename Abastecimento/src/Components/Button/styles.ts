@@ -3,15 +3,16 @@ import { RectButton } from 'react-native-gesture-handler';
 
 const borderRadius = '10px';
 
-export const Container = styled(RectButton).attrs((buttonConfirm: boolean, top: string) => { })`
-    width: ${({ buttonConfirm }: any ) => buttonConfirm ? '90' : '100'}%;
-    align-self: ${({ buttonConfirm }: any ) => buttonConfirm ? 'center' : 'auto'};
+export const Container = styled(RectButton).attrs((alignSelf: string, width: string, top: string, position: boolean) => {})`
+    width: ${({ width }: any ) => width ? width : '90'}%;
+    align-self: ${({ alignSelf }: any ) => alignSelf ? 'auto' : 'center'};
+    position: ${({ position }: any) => position ? 'relative' : 'absolute'};
     height: 60px;
     background-color: #00469B;
     border-radius: ${borderRadius};
     justify-content: center;
     align-items: ${({ align }: any) => align || 'center'};
-    top: ${({ top }: any) => top ? top : '0'}%;
+    top: ${({ top }: any) => top ? top : '88'}%;
 `;
 
 export const TextContainer = styled.View`

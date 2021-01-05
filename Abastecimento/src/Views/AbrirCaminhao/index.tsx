@@ -22,6 +22,11 @@ const AbrirCaminhao: React.FC = () => {
         setIsSwitchOn(!isSwitchOn);
     };
 
+    const cleanInputValue = ((input: any) => {
+        input('');
+        setIsSwitchOn(false);
+    });
+
     return (
         <ContainerPrincipal>
             <HeaderView
@@ -35,6 +40,9 @@ const AbrirCaminhao: React.FC = () => {
                     icon={featherIcons.truck}
                     placeholder={placeholder.placaVeiculo}
                     onChangeText={setPlacaVeiculoInput}
+                    iconRight={placaVeiculoInput ? featherIcons.x : ''}
+                    cleanInput={cleanInputValue.bind(this, setPlacaVeiculoInput)}
+                    value={placaVeiculoInput}
                     bordered
                 />
                 <WarningSwitch
@@ -44,15 +52,9 @@ const AbrirCaminhao: React.FC = () => {
                 />
             </Container>
             {
-                !placaVeiculoInput ? 
-                    <TipBottomView text={tipText.informe_Placa} />
-                : 
-                <Button
-                    top='52'
-                    buttonConfirm
-                >
-                    Gravar
-                </Button>
+                (placaVeiculoInput !== '' && isSwitchOn)
+                ? <Button>Gravar</Button>
+                : <TipBottomView text={tipText.informe_Placa} />
             }
         </ContainerPrincipal>
     )

@@ -71,7 +71,11 @@ const Login: React.FC = () => {
                         bordered
                     />
                 </ContainerInput>
-                <SubmitButton isLoading={singing} onPress={logar}>
+                <SubmitButton
+                    positionRelative
+                    width='100'
+                    top={'0'}
+                    isLoading={singing} onPress={logar}>
                     Entrar
                 </SubmitButton>
                 <Footer>

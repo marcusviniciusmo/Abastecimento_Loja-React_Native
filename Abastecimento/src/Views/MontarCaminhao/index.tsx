@@ -4,7 +4,7 @@ import HeaderView from '../../Components/HeaderView';
 import Input from '../../Components/Input';
 import TipBottomView from '../../Components/TipBottomView';
 import TagToInsert from '../../Components/TagToInsert';
-import { iconBack, settingsIcon, title, featherIcons, placeholder, tipText, buttonConfirmTopDefault } from '../../Utils';
+import { iconBack, settingsIcon, title, featherIcons, placeholder, tipText } from '../../Utils';
 import Button from '../../Components/Button';
 
 const MontarCaminhao: React.FC = () => {
@@ -70,8 +70,6 @@ const MontarCaminhao: React.FC = () => {
             {
                 (placaVeiculoInput && numeroPedidoInput && filialInput && inserirEtiquetaInput)
                 ? <Button
-                        top={buttonConfirmTopDefault}
-                        buttonConfirm
                     >Gravar</Button>
                 : <TipBottomView text={tipText.informe_Todos_Campos}/>
             }
