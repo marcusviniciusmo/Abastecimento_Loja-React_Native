@@ -16,6 +16,7 @@ interface InputProps extends TextInputProps {
     height?: number;
     bordered?: boolean;
     buttonProperties?: buttonProperties;
+    cleanInput?: () => void;
 };
 
 const Input: React.FC<InputProps> = ({
@@ -25,14 +26,19 @@ const Input: React.FC<InputProps> = ({
     size,
     height,
     buttonProperties,
+    cleanInput,
     ...props
-}) => (
+}) => {
+
+    const cleanInputvalue = () => cleanInput();
+
+    return (
         <Container bordered={bordered} height={height ? height : heightDefaultInput}>
             <IconStyled name={icon} size={size ? size : sizeDefaultInput} color={'#666360'} />
             <TextInput placeholderTextColor='#888' {...props} />
             {
-                iconRight &&
-                <IconStyledRight name={iconRight} size={size ? size : sizeDefaultInput} color={'#666360'}/>
+                iconRight !== '' &&
+                <IconStyledRight name={iconRight} size={size ? size : sizeDefaultInput} color={'#666360'} onPress={cleanInputvalue}/>
             }
             {
                 buttonProperties && (
@@ -41,6 +47,7 @@ const Input: React.FC<InputProps> = ({
                     </IconButton>
                 )}
         </Container>
-    );
+    )
+};
 
 export default Input;

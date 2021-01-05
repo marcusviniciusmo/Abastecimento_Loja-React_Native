@@ -12,6 +12,10 @@ const MontarCaminhao: React.FC = () => {
     const [filialInput, setFilialInput] = useState('');
     const [inserirEtiquetaInput, setInserirEtiquetaInput] = useState('');
 
+    const cleanValueInput = ((input: any) => {
+        input('');
+    });
+
     return (
         <ContainerPrincipal>
             <HeaderView
@@ -25,6 +29,9 @@ const MontarCaminhao: React.FC = () => {
                     icon={featherIcons.truck}
                     placeholder={placeholder.placaVeiculo}
                     onChangeText={setPlacaVeiculoInput}
+                    iconRight={placaVeiculoInput ? featherIcons.x : ''}
+                    cleanInput={cleanValueInput.bind(this, setPlacaVeiculoInput)}
+                    value={placaVeiculoInput}
                     bordered
                 />
                 <Input
@@ -32,6 +39,9 @@ const MontarCaminhao: React.FC = () => {
                     icon={featherIcons.hash}
                     placeholder={placeholder.numeroPedido}
                     onChangeText={setNumeroPedidoInput}
+                    iconRight={numeroPedidoInput ? featherIcons.x : ''}
+                    cleanInput={cleanValueInput.bind(this, setNumeroPedidoInput)}
+                    value={numeroPedidoInput}
                     bordered
                 />
                 <Input
@@ -39,6 +49,9 @@ const MontarCaminhao: React.FC = () => {
                     icon={featherIcons.home}
                     placeholder={placeholder.filial}
                     onChangeText={setFilialInput}
+                    iconRight={filialInput ? featherIcons.x : ''}
+                    cleanInput={cleanValueInput.bind(this, setFilialInput)}
+                    value={filialInput}
                     bordered
                 />
                 <Input
@@ -46,6 +59,9 @@ const MontarCaminhao: React.FC = () => {
                     icon={featherIcons.plus}
                     placeholder={placeholder.inserirEtiqueta}
                     onChangeText={setInserirEtiquetaInput}
+                    iconRight={inserirEtiquetaInput ? featherIcons.x : ''}
+                    cleanInput={cleanValueInput.bind(this, setInserirEtiquetaInput)}
+                    value={inserirEtiquetaInput}
                     bordered
                 />
                 <TagToInsert />

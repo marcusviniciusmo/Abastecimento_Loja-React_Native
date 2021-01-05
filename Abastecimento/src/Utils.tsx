@@ -47,6 +47,7 @@ export const featherIcons = {
     truck: 'truck',
     upload: 'upload',
     user: 'user',
+    x: 'x'
 };
 
 export const placeholder = {
