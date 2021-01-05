@@ -78,4 +78,4 @@ export const tipText = {
     selecione_Centro_Distribuicao: 'Selecione um Centro de Distribuição para continuar',
 };
 
-export const buttonConfirmTopDefault = '25';
+export const buttonConfirmTopDefault = '32';

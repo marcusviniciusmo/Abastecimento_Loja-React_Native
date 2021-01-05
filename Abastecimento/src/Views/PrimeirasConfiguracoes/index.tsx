@@ -4,7 +4,7 @@ import HeaderView from '../../Components/HeaderView';
 import BarView from '../../Components/BarView';
 import TipBottomView from '../../Components/TipBottomView';
 import { ICentrosDistribuicao } from '../../pmenos-utils/types';
-import { title, featherIcons, tipText, buttonConfirmTopDefault } from '../../Utils';
+import { title, featherIcons, tipText } from '../../Utils';
 import ModalAlertaConfirmacao from '../../Components/ModalAlertaConfirmacao';
 import Button from '../../Components/Button';
 
@@ -94,7 +94,7 @@ const PrimeiroAcesso: React.FC = () => {
                         {
                             centroDistribuicaoSelecionado > 0
                             ? <Button
-                                top={buttonConfirmTopDefault}
+                                top='25'
                                 buttonConfirm>Prosseguir</Button>
                             : <TipBottomView text={tipText.selecione_Centro_Distribuicao} />
                         }

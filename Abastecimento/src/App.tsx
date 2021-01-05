@@ -26,10 +26,10 @@ import ModalAlertaConfirmacao from './Components/ModalAlertaConfirmacao';
 const App = () => {
   return (
     // <Login />
-    <PrimeirasConfiguracoes />
+    // <PrimeirasConfiguracoes />
     // <Menu />
     // <AbrirCaminhao />
-    // <MontarCaminhao />
+    <MontarCaminhao />
     // <FecharCaminhao />
     // <EmbarcarCaminhao />
     // <ModificarPlaca />

@@ -4,7 +4,8 @@ import HeaderView from '../../Components/HeaderView';
 import Input from '../../Components/Input';
 import TipBottomView from '../../Components/TipBottomView';
 import TagToInsert from '../../Components/TagToInsert';
-import { iconBack, settingsIcon, title, featherIcons, placeholder, tipText } from '../../Utils';
+import { iconBack, settingsIcon, title, featherIcons, placeholder, tipText, buttonConfirmTopDefault } from '../../Utils';
+import Button from '../../Components/Button';
 
 const MontarCaminhao: React.FC = () => {
     const [placaVeiculoInput, setPlacaVeiculoInput] = useState('');
@@ -66,7 +67,14 @@ const MontarCaminhao: React.FC = () => {
                 />
                 <TagToInsert />
             </Container>
-            <TipBottomView text={tipText.informe_Todos_Campos}/>
+            {
+                (placaVeiculoInput && numeroPedidoInput && filialInput && inserirEtiquetaInput)
+                ? <Button
+                        top={buttonConfirmTopDefault}
+                        buttonConfirm
+                    >Gravar</Button>
+                : <TipBottomView text={tipText.informe_Todos_Campos}/>
+            }
         </ContainerPrincipal>
     )
 };
