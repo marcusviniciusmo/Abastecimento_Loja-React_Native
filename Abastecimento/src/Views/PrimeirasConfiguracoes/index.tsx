@@ -39,23 +39,19 @@ const PrimeiroAcesso: React.FC = () => {
         nomeFantasiaCD: 'CD05-CONTAGEM/MG'
     }];
 
-    const openModal = () => {
-        setShowModal(true);
+    const onHandlerModal = () => {
+        setShowModal(!showModal);
     };
 
     const getShowModal = () => {
         return showModal;
     };
 
-    const closeModal = () => {
-        setShowModal(false);
-    };
-
     const selecionarCD = (cd: any) => {
 
         if (cd !== centroDistribuicaoSelecionado) {
             setCentroDistribuicaoSelecionado(cd);
-            openModal();
+            onHandlerModal();
         } else {
             setCentroDistribuicaoSelecionado(0);
         };
@@ -63,7 +59,7 @@ const PrimeiroAcesso: React.FC = () => {
 
     const getCDSelected = () => {
         return centroDistribuicaoSelecionado;
-    }
+    };
 
     return (
         <>
@@ -103,7 +99,7 @@ const PrimeiroAcesso: React.FC = () => {
                             text={alertText}
                             buttonConfirm
                             textButton={textButtonAlert.certo}
-                            closeModal={closeModal}
+                            closeModal={onHandlerModal}
                     />
             }
         </>

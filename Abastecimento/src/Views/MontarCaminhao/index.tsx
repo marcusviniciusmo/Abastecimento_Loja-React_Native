@@ -18,14 +18,22 @@ const MontarCaminhao: React.FC = () => {
     const cleanValueInput = ((input: any) => {
         input('');
     });
+    
+    const onHandlerModal = () => {
+        setShowModal(!showModal);
+    };
 
     const getShowModal = () => {
         return showModal;
     };
 
-    const onHandlerModal = () => {
-        setShowModal(!showModal);
-    }
+    const montarCaminhao = () => {
+        setPlacaVeiculoInput('');
+        setNumeroPedidoInput('');
+        setFilialInput('');
+        setInserirEtiquetaInput('');
+        onHandlerModal();
+    };
 
     return (
         <>
@@ -82,7 +90,7 @@ const MontarCaminhao: React.FC = () => {
                     </Container>
                     {
                         (placaVeiculoInput && numeroPedidoInput && filialInput && inserirEtiquetaInput)
-                            ? <ButtonConfirm onPress={onHandlerModal}>Gravar</ButtonConfirm>
+                            ? <ButtonConfirm onPress={montarCaminhao}>Gravar</ButtonConfirm>
                             : <TipBottomView text={tipText.informe_Todos_Campos} />
                     }
                 </ContainerPrincipal>

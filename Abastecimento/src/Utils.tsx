@@ -91,4 +91,5 @@ export const textButtonAlert = {
 export const alertText = {
     caminhaoAbertoSuccess: 'Caminhão aberto com sucesso!',
     caminhaoMontadoSuccess: 'Caminhão montado com sucesso!',
+    caminhaoFechadoSuccess: 'Caminhão fechado com sucesso!',
 }

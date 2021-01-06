@@ -29,22 +29,18 @@ const AbrirCaminhao: React.FC = () => {
         setIsSwitchOn(false);
     });
 
-    const openModal = () => {
-        setShowModal(true);
+    const onHandlerModal = () => {
+        setShowModal(!showModal);
     };
 
     const getShowModal = () => {
         return showModal;
     };
 
-    const closeModal = () => {
-        setShowModal(false);
-    };
-
     const abrirCaminhao = () => {
         setPlacaVeiculoInput('');
         setIsSwitchOn(false);
-        openModal();
+        onHandlerModal();
     };
 
     return (
@@ -88,7 +84,7 @@ const AbrirCaminhao: React.FC = () => {
                         text={alertText.caminhaoAbertoSuccess}
                         buttonConfirm
                         textButton={textButtonAlert.certo}
-                        closeModal={closeModal}
+                        closeModal={onHandlerModal}
                     />
             }
         </>
