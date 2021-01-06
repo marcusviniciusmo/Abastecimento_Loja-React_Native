@@ -5,13 +5,12 @@ import Input from '../../Components/Input';
 import TipBottomView from '../../Components/TipBottomView';
 import WarningSwitch from '../../Components/WarningSwitch';
 import ButtonConfirm from '../../Components/ButtonConfirm';
-import { iconBack, settingsIcon, title, featherIcons, tipText, placeholder, titleAlertModal, textButtonAlert } from '../../Utils';
+import { iconBack, settingsIcon, title, featherIcons, tipText, placeholder, titleAlertModal, alertText, textButtonAlert } from '../../Utils';
 import ModalAlertaConfirmacao from '../../Components/ModalAlertaConfirmacao';
 
 const AbrirCaminhao: React.FC = () => {
     const warningTextOff = 'Deseja reabrir o caminhão?'
     const warningTextOn = 'Sim, desejo reabrir o caminhão.'
-    const alertText = 'Caminhão aberto com sucesso!'
 
     const [placaVeiculoInput, setPlacaVeiculoInput] = useState('');
     const [isSwitchOn, setIsSwitchOn] = useState(false);
@@ -78,7 +77,7 @@ const AbrirCaminhao: React.FC = () => {
                         <>
                             {
                                 placaVeiculoInput !== '' && isSwitchOn
-                                    ? <ButtonConfirm onPress={() => abrirCaminhao()}>Gravar</ButtonConfirm>
+                                    ? <ButtonConfirm onPress={abrirCaminhao}>Gravar</ButtonConfirm>
                                     : <TipBottomView text={tipText.informe_Placa} />
                             }
                         </>
@@ -86,7 +85,7 @@ const AbrirCaminhao: React.FC = () => {
                     : <ModalAlertaConfirmacao
                         titleAlert={titleAlertModal.sucesso}
                         icon={featherIcons.checkCircle}
-                        text={alertText}
+                        text={alertText.caminhaoAbertoSuccess}
                         buttonConfirm
                         textButton={textButtonAlert.certo}
                         closeModal={closeModal}
