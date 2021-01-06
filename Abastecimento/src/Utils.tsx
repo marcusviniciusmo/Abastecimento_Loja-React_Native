@@ -87,3 +87,8 @@ export const titleAlertModal = {
 export const textButtonAlert = {
     certo: 'Certo',
 }
+
+export const alertText = {
+    caminhaoAbertoSuccess: 'Caminhão aberto com sucesso!',
+    caminhaoMontadoSuccess: 'Caminhão montado com sucesso!',
+}

@@ -36,6 +36,13 @@ export const TypeAlert = styled.Text.attrs((buttonConfirm: boolean) => {
 export const IconAlert = styled(Icon)`
     align-self: center;
     padding: 10px;
+    margin-top: 5px;
+`;
+
+export const ContainerMessage = styled.View`
+    height: 23%;
+    flex-direction: column;
+    justify-content: flex-end;
 `;
 
 export const TextMessage = styled.Text`
