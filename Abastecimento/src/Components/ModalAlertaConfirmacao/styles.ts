@@ -52,6 +52,9 @@ export const ContainerButton = styled.TouchableOpacity.attrs((buttonConfirm: boo
     buttonConfirm
 })`
     background-color: ${({ buttonConfirm }: any) => buttonConfirm ? confirmColor : errorColor};
+    position: absolute;
+    top: 81%;
+    width: 100%;
     flex: 1;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;

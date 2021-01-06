@@ -37,6 +37,7 @@ export const featherIcons = {
     barChart: 'bar-chart-2',
     calendar: 'calendar',
     camera: 'camera',
+    checkCircle: 'check-circle',
     external_link: 'external-link',
     hash: 'hash',
     home: 'home',
@@ -77,3 +78,12 @@ export const tipText = {
     informe_Todos_Campos: 'Informe todos os campos para continuar',
     selecione_Centro_Distribuicao: 'Selecione um Centro de Distribuição para continuar',
 };
+
+export const titleAlertModal = {
+    atencao: 'Atenção',
+    sucesso: 'Sucesso',
+}
+
+export const textButtonAlert = {
+    certo: 'Certo',
+}

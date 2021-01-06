@@ -34,7 +34,12 @@ const Button: React.FC<ButtonProps> = ({
     positionRelative,
     ...props
 }) => (
-        <Container {...props} align={isRightButton ? 'flex-end' : 'center'} alignSelf={align} width={width} top={top} position={positionRelative}>
+        <Container {...props}
+            align={isRightButton ? 'flex-end' : 'center'}
+            alignSelf={align}
+            width={width}
+            top={top}
+            position={positionRelative}>
             <TextContainer>
                 <ButtonText
                     size={small ? 12 : 16}

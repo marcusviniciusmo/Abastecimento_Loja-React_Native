@@ -4,7 +4,7 @@ import HeaderView from '../../Components/HeaderView';
 import BarView from '../../Components/BarView';
 import TipBottomView from '../../Components/TipBottomView';
 import { ICentrosDistribuicao } from '../../pmenos-utils/types';
-import { title, featherIcons, tipText } from '../../Utils';
+import { title, featherIcons, tipText, titleAlertModal, textButtonAlert } from '../../Utils';
 import ModalAlertaConfirmacao from '../../Components/ModalAlertaConfirmacao';
 import Button from '../../Components/Button';
 
@@ -98,11 +98,11 @@ const PrimeiroAcesso: React.FC = () => {
                         }
                     </ContainerPrincipal>
                     : <ModalAlertaConfirmacao
-                            titleAlert='Atenção'
+                            titleAlert={titleAlertModal.atencao}
                             icon={featherIcons.alertCircle}
                             text={alertText}
                             buttonConfirm
-                            textButton='Certo'
+                            textButton={textButtonAlert.certo}
                             closeModal={closeModal}
                     />
             }
