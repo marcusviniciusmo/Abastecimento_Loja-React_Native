@@ -6,7 +6,7 @@ import TipBottomView from '../../Components/TipBottomView';
 import { ICentrosDistribuicao } from '../../pmenos-utils/types';
 import { title, featherIcons, tipText, titleAlertModal, textButtonAlert } from '../../Utils';
 import ModalAlertaConfirmacao from '../../Components/ModalAlertaConfirmacao';
-import Button from '../../Components/Button';
+import ButtonConfirm from '../../Components/ButtonConfirm';
 
 const PrimeiroAcesso: React.FC = () => {
     const textBar = 'Centro de Distribuição';
@@ -93,7 +93,7 @@ const PrimeiroAcesso: React.FC = () => {
                         </>
                         {
                             centroDistribuicaoSelecionado > 0
-                            ? <Button>Prosseguir</Button>
+                            ? <ButtonConfirm>Prosseguir</ButtonConfirm>
                             : <TipBottomView text={tipText.selecione_Centro_Distribuicao} />
                         }
                     </ContainerPrincipal>

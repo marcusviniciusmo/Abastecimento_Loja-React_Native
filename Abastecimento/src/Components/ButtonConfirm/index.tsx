@@ -1,5 +1,4 @@
 import React from 'react';
-import { RectButtonProperties } from 'react-native-gesture-handler';
 import {
     Container,
     TextContainer,
@@ -8,7 +7,7 @@ import {
     TagText
 } from './styles';
 
-interface ButtonProps extends RectButtonProperties {
+interface ButtonConfirmProps  {
     children: string;
     small?: boolean;
     color?: boolean;
@@ -19,9 +18,10 @@ interface ButtonProps extends RectButtonProperties {
     count?: boolean;
     isRightButton?: boolean;
     positionRelative?: boolean;
+    onPress?: () => void;
 }
 
-const Button: React.FC<ButtonProps> = ({
+const ButtonConfirm: React.FC<ButtonConfirmProps> = ({
     children,
     small,
     color,
@@ -32,9 +32,11 @@ const Button: React.FC<ButtonProps> = ({
     count,
     isRightButton,
     positionRelative,
+    onPress,
     ...props
 }) => (
         <Container {...props}
+            onPress={onPress}
             align={isRightButton ? 'flex-end' : 'center'}
             alignSelf={align}
             width={width}
@@ -52,4 +54,4 @@ const Button: React.FC<ButtonProps> = ({
         </Container>
     );
 
-export default Button;
+export default ButtonConfirm;

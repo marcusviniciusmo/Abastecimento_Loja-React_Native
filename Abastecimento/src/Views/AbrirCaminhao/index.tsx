@@ -4,7 +4,7 @@ import HeaderView from '../../Components/HeaderView';
 import Input from '../../Components/Input';
 import TipBottomView from '../../Components/TipBottomView';
 import WarningSwitch from '../../Components/WarningSwitch';
-import Button from '../../Components/Button';
+import ButtonConfirm from '../../Components/ButtonConfirm';
 import { iconBack, settingsIcon, title, featherIcons, tipText, placeholder, titleAlertModal, textButtonAlert } from '../../Utils';
 import ModalAlertaConfirmacao from '../../Components/ModalAlertaConfirmacao';
 
@@ -43,6 +43,7 @@ const AbrirCaminhao: React.FC = () => {
     };
 
     const abrirCaminhao = () => {
+        setPlacaVeiculoInput('');
         setIsSwitchOn(false);
         openModal();
     };
@@ -77,7 +78,7 @@ const AbrirCaminhao: React.FC = () => {
                         <>
                             {
                                 placaVeiculoInput !== '' && isSwitchOn
-                                    ? <Button onPress={() => abrirCaminhao()}>Gravar</Button>
+                                    ? <ButtonConfirm onPress={() => abrirCaminhao()}>Gravar</ButtonConfirm>
                                     : <TipBottomView text={tipText.informe_Placa} />
                             }
                         </>

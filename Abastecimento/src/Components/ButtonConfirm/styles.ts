@@ -1,9 +1,8 @@
 import styled from 'styled-components/native';
-import { RectButton } from 'react-native-gesture-handler';
 
 const borderRadius = '10px';
 
-export const Container = styled(RectButton).attrs((alignSelf: string, width: string, top: string, position: boolean) => {})`
+export const Container = styled.TouchableOpacity.attrs((alignSelf: string, width: string, top: string, position: boolean) => {})`
     width: ${({ width }: any ) => width ? width : '90'}%;
     align-self: ${({ alignSelf }: any ) => alignSelf ? 'auto' : 'center'};
     position: ${({ position }: any) => position ? 'relative' : 'absolute'};

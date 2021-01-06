@@ -1,11 +1,10 @@
 import styled from 'styled-components/native';
-import Button from '../../Components/Button';
+import ButtonConfirm from '../../Components/ButtonConfirm';
 
 export const Container = styled.ScrollView`
   width: 100%;
   padding: 30px;
 `;
-
 
 export const ContainerInput = styled.View`
     margin-top: 30px;
@@ -26,6 +25,6 @@ export const TextFooter = styled.Text`
   text-align: center;
 `;
 
-export const SubmitButton = styled(Button)`
+export const SubmitButton = styled(ButtonConfirm)`
   margin-top: 5px;
 `;
