@@ -7,8 +7,9 @@ import WarningSwitch from '../../Components/WarningSwitch';
 import ButtonConfirm from '../../Components/ButtonConfirm';
 import { iconBack, settingsIcon, title, featherIcons, tipText, placeholder, titleAlertModal, alertText, textButtonAlert } from '../../Utils';
 import ModalAlertaConfirmacao from '../../Components/ModalAlertaConfirmacao';
+import { NavigationProps } from '../../pmenos-utils/types';
 
-const AbrirCaminhao: React.FC = () => {
+const AbrirCaminhao: React.FC<NavigationProps> = ({ navigation }) => {
     const warningTextOff = 'Deseja reabrir o caminhão?'
     const warningTextOn = 'Sim, desejo reabrir o caminhão.'
 
@@ -52,6 +53,7 @@ const AbrirCaminhao: React.FC = () => {
                             title={title.abrirCaminhao}
                             iconBack={iconBack}
                             settings={settingsIcon}
+                            goBack={() => navigation.goBack()}
                         />
                         <Container>
                             <Input

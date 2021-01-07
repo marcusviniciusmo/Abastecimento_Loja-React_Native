@@ -1,3 +1,7 @@
+export interface NavigationProps {
+    navigation: any;
+};
+
 export interface IAuthContext {
     token?: string | null;
     signed: boolean;
@@ -29,9 +33,16 @@ export interface IProfile {
     email: string;
     role: string;
     permissions: Array<string>;
-}
+};
 
 export interface ICentrosDistribuicao {
     idCD: number;
     nomeFantasiaCD: string;
-}
+};
+
+export interface SubOptionsMenuProps {
+    idOptions: number;
+    descricaoOptions: string;
+    categoriaMenu: string;
+    route: string;
+};

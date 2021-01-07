@@ -17,9 +17,6 @@ export const StyledContainer = styled.View`
     padding: 5px;
 `;
 
-export const ButtonBack = styled.TouchableOpacity`
-`;
-
 export const TextHeaderView = styled.Text`
     font-size: 18px;
     color: #fff;

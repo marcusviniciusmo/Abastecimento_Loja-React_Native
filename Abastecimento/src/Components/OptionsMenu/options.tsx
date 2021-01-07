@@ -1,127 +1,158 @@
-export const OptionsExpedicao = [{
+import { SubOptionsMenuProps } from '../../pmenos-utils/types';
+import { title } from '../../Utils';
+
+export const OptionsExpedicao: Array<SubOptionsMenuProps> = [{
         idOptions: 1,
-        descricaoOptions: 'Abrir caminhão',
-        categoriaMenu: 'Expedição'
+        descricaoOptions: title.abrirCaminhao,
+        categoriaMenu: 'Expedição',
+        route: 'AbrirCaminhao',
     },
     {
         idOptions: 2,
-        descricaoOptions: 'Montar caminhão',
-        categoriaMenu: 'Expedição'
+        descricaoOptions: title.montarCaminhao,
+        categoriaMenu: 'Expedição',
+        route: 'MontarCaminhao',
     },
     {
         idOptions: 3,
-        descricaoOptions: 'Fechar caminhão',
-        categoriaMenu: 'Expedição'
+        descricaoOptions: title.fecharCaminhao,
+        categoriaMenu: 'Expedição',
+        route: 'FecharCaminhao',
     },
     {
         idOptions: 4,
-        descricaoOptions: 'Embarcar caminhão',
-        categoriaMenu: 'Expedição'
+        descricaoOptions: title.embarcarCaminhao,
+        categoriaMenu: 'Expedição',
+        route: 'EmbarcarCaminhao',
     },
     {
         idOptions: 5,
-        descricaoOptions: 'Modificar placa do caminhão',
-        categoriaMenu: 'Expedição'
+        descricaoOptions: `${title.modificarPlaca} do Caminhão`,
+        categoriaMenu: 'Expedição',
+        route: 'ModificarPlacaDoCaminhao',
     },
     {
         idOptions: 6,
-        descricaoOptions: 'Consultar caminhão',
-        categoriaMenu: 'Expedição'
+        descricaoOptions: title.forcarEncerramento,
+        categoriaMenu: 'Expedição',
+        route: 'ForcarEncerramento',
     },
     {
         idOptions: 7,
-        descricaoOptions: 'Consultar volumes não caminhão',
-        categoriaMenu: 'Expedição'
+        descricaoOptions: title.consultarCaminhao,
+        categoriaMenu: 'Expedição',
+        route: 'ConsultarCaminhao',
     },
     {
         idOptions: 8,
-        descricaoOptions: 'Consultar filiais não caminhão',
-        categoriaMenu: 'Expedição'
+        descricaoOptions: `Consultar ${title.volumesNaoEscaneados}`,
+        categoriaMenu: 'Expedição',
+        route: 'ConsultarVolumesNaoEscaneados',
+    },
+    {
+        idOptions: 9,
+        descricaoOptions: `Consultar ${title.filiaisNaoEmbarcadas}`,
+        categoriaMenu: 'Expedição',
+        route: 'ConsultarFiliaisNaoEmbarcadas',
     },
 ];
 
-export const OptionsReposicao = [{
+export const OptionsReposicao: Array<SubOptionsMenuProps> = [{
         idOptions: 1,
-        descricaoOptions: 'Consultar por Código de Barras',
-        categoriaMenu: 'Reposição'
+        descricaoOptions: title.consultarPorCodigoDeBarras,
+        categoriaMenu: 'Reposição',
+        route: 'ConsultarPorCodigoDeBarras',
     },
     {
         idOptions: 2,
-        descricaoOptions: 'Consultar por Endereço',
-        categoriaMenu: 'Reposição'
+        descricaoOptions: title.consultarPorEndereco,
+        categoriaMenu: 'Reposição',
+        route: 'ConsultarPorEndereco',
     },
     {
         idOptions: 3,
         descricaoOptions: 'Consultar Endereços não Impressos',
-        categoriaMenu: 'Reposição'
+        categoriaMenu: 'Reposição',
+        route: 'ConsultarEnderecosNaoImpressos',
     },
     {
         idOptions: 4,
         descricaoOptions: 'Repor',
-        categoriaMenu: 'Reposição'
+        categoriaMenu: 'Reposição',
+        route: 'Repor',
     },
     {
         idOptions: 5,
         descricaoOptions: 'Finalizar Reposição',
-        categoriaMenu: 'Reposição'
+        categoriaMenu: 'Reposição',
+        route: 'FinalizarReposicao',
     },
     {
         idOptions: 6,
         descricaoOptions: 'Consultar Pedido',
-        categoriaMenu: 'Reposição'
+        categoriaMenu: 'Reposição',
+        route: '',
     }
 ];
 
-export const OptionsEntradaDeMercadoria = [{
+export const OptionsEntradaDeMercadoria: Array<SubOptionsMenuProps> = [{
         idOptions: 1,
         descricaoOptions: 'Criar Conferência',
-        categoriaMenu: 'EntradaDeMercadorias'
+        categoriaMenu: 'EntradaDeMercadorias',
+        route: 'CriarConferencia',
     },
     {
         idOptions: 2,
-        descricaoOptions: 'Conferência',
-        categoriaMenu: 'EntradaDeMercadorias'
+        descricaoOptions: 'Conferir',
+        categoriaMenu: 'EntradaDeMercadorias',
+        route: 'Conferir',
     },
     {
         idOptions: 3,
         descricaoOptions: 'Excluir Conferência',
-        categoriaMenu: 'EntradaDeMercadorias'
+        categoriaMenu: 'EntradaDeMercadorias',
+        route: 'ExcluirConferencia',
     },
     {
         idOptions: 4,
         descricaoOptions: 'Modificar Produto com Lote',
-        categoriaMenu: 'EntradaDeMercadorias'
+        categoriaMenu: 'EntradaDeMercadorias',
+        route: 'ModificarProdutoComLote',
     },
     {
         idOptions: 5,
         descricaoOptions: 'Modificar Produto sem Lote',
-        categoriaMenu: 'EntradaDeMercadorias'
+        categoriaMenu: 'EntradaDeMercadorias',
+        route: 'ModificarProdutoSemLote',
     }
 ];
 
-export const OptionsDescarregamento = [{
+export const OptionsDescarregamento: Array<SubOptionsMenuProps> = [{
         idOptions: 0,
         descricaoOptions: '',
-        categoriaMenu: ''
-
+        categoriaMenu: '',
+        route: '',
     }
 ];
 
-export const OptionsArmazenamento = [{
+export const OptionsArmazenamento: Array<SubOptionsMenuProps> = [{
         idOptions: 0,
         descricaoOptions: '',
-        categoriaMenu: ''
+        categoriaMenu: '',
+        route: '',
     }
 ];
 
-export const OptionsConfiguracoes = [{
+export const OptionsConfiguracoes: Array<SubOptionsMenuProps> = [{
         idOptions: 1,
         descricaoOptions: 'Alterar centro de distribuição',
-        categoriaMenu: 'Configuracoes'
+        categoriaMenu: 'Configuracoes',
+        route: 'AlterarCentroDeDistribuicao',
     },
     {
         idOptions: 2,
         descricaoOptions: 'Deslogar',
-        categoriaMenu: 'Configuracoes'
+        categoriaMenu: 'Configuracoes',
+        route: 'Deslogar',
     },
 ];

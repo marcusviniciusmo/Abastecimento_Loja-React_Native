@@ -7,8 +7,9 @@ import { ICentrosDistribuicao } from '../../pmenos-utils/types';
 import { title, featherIcons, tipText, titleAlertModal, textButtonAlert } from '../../Utils';
 import ModalAlertaConfirmacao from '../../Components/ModalAlertaConfirmacao';
 import ButtonConfirm from '../../Components/ButtonConfirm';
+import { NavigationProps } from '../../pmenos-utils/types';
 
-const PrimeiroAcesso: React.FC = () => {
+const PrimeiroAcesso: React.FC<NavigationProps> = ({ navigation }) => {
     const textBar = 'Centro de Distribuição';
 
     const [centrosDistribuicao, setCentrosDistribuicao] = useState<Array<ICentrosDistribuicao> | null>(null);
@@ -61,6 +62,12 @@ const PrimeiroAcesso: React.FC = () => {
         return centroDistribuicaoSelecionado;
     };
 
+    const confirmarCDSelecionado = () => {
+        if (centroDistribuicaoSelecionado > 0) {
+            navigation.navigate('Menu');
+        };
+    };
+
     return (
         <>
             {
@@ -89,7 +96,7 @@ const PrimeiroAcesso: React.FC = () => {
                         </>
                         {
                             centroDistribuicaoSelecionado > 0
-                            ? <ButtonConfirm>Prosseguir</ButtonConfirm>
+                            ? <ButtonConfirm onPress={confirmarCDSelecionado}>Prosseguir</ButtonConfirm>
                             : <TipBottomView text={tipText.selecione_Centro_Distribuicao} />
                         }
                     </ContainerPrincipal>

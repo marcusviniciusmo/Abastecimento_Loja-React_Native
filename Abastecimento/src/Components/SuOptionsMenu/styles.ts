@@ -1,9 +1,6 @@
 import styled from 'styled-components/native';
 
-export const View = styled.View`
-`;
-
-export const Container = styled.View.attrs((id: number, options: any) => {
+export const Container = styled.TouchableOpacity.attrs((id: number, options: any) => {
 })`
     width: 80%;
     align-self: center;

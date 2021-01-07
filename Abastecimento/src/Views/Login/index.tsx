@@ -5,8 +5,9 @@ import Input from '../../Components/Input';
 import { Alert } from 'react-native';
 import useAuthentication from '../../pmenos-utils/hooks/useAuthentication';
 import { featherIcons, placeholder } from '../../Utils';
+import { NavigationProps } from '../../pmenos-utils/types';
 
-const Login: React.FC = () => {
+const Login: React.FC<NavigationProps> = ({ navigation }) => {
     const [userInput, setUserInput] = useState('');
     const [passwordInput, setPasswordInput] = useState('');
     const [singing, setSinging] = useState(false);
@@ -19,28 +20,31 @@ const Login: React.FC = () => {
 
             if (!userInput) {
                 erros.push('Insira a sua matrícula!');
-            }
+            };
+
             if (!passwordInput) {
                 erros.push('Insira a sua senha!');
-            }
+            };
 
             if (erros.length) {
                 Alert.alert('Erro no login:', erros.join('\r\n'));
                 return;
-            }
+            };
 
-            setSinging(true);
-            login(userInput, passwordInput)
-                .then(() => { })
-                .catch((error) => {
-                    console.log('!erro.login!')
-                    console.log(error)
-                    console.log('Erro no login:', 'Usuário ou senha inválidos.');
-                })
-                .finally(() => {
-                    setSinging(false);
-                });
-        }
+            navigation.navigate('PrimeirasConfiguracoes');
+
+            // setSinging(true);
+            // login(userInput, passwordInput)
+            //     .then(() => { })
+            //     .catch((error) => {
+            //         console.log('!erro.login!')
+            //         console.log(error)
+            //         console.log('Erro no login:', 'Usuário ou senha inválidos.');
+            //     })
+            //     .finally(() => {
+            //         setSinging(false);
+            //     });
+        };
     };
 
     return (

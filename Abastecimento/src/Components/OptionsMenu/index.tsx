@@ -2,22 +2,19 @@ import React, { useState } from 'react';
 import { Container, ViewOptions, TextOptions, OptionsStyled, ButtonExpand } from './styles';
 import Icon from 'react-native-vector-icons/Feather';
 import SubOptionsMenu from '../SuOptionsMenu';
-
-interface OptionsProps {
-    idOptions: number;
-    descricaoOptions: string;
-    categoriaMenu: string;
-}
+import { SubOptionsMenuProps } from '../../pmenos-utils/types';
 
 interface OptionsMenuProps {
+    navigation?: any;
     text: string;
     icon?: string;
     showButton?: boolean;
     isFavorito?: boolean;
-    options?: Array<OptionsProps>;
+    options?: Array<SubOptionsMenuProps>;
 }
 
 const OptionsMenu: React.FC<OptionsMenuProps> = ({
+    navigation,
     icon,
     text,
     showButton,
@@ -50,6 +47,7 @@ const OptionsMenu: React.FC<OptionsMenuProps> = ({
                 expandir &&
                 <SubOptionsMenu
                     options={options}
+                    navigation={navigation}
                 />
             }
         </Container>

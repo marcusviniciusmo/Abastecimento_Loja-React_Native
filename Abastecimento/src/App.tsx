@@ -1,8 +1,5 @@
 import React from 'react';
-import Login from './Views/Login';
-import PrimeirasConfiguracoes from './Views/PrimeirasConfiguracoes';
-import Menu from './Views/Menu';
-import AbrirCaminhao from './Views/AbrirCaminhao';
+import Routes from './routes';
 import MontarCaminhao from './Views/MontarCaminhao';
 import FecharCaminhao from './Views/FecharCaminhao';
 import EmbarcarCaminhao from './Views/EmbarcarCaminhao';
@@ -25,10 +22,7 @@ import ModalAlertaConfirmacao from './Components/ModalAlertaConfirmacao';
 
 const App = () => {
   return (
-    // <Login />
-    // <PrimeirasConfiguracoes />
-    // <Menu />
-    <AbrirCaminhao />
+    <Routes />
     // <MontarCaminhao />
     // <FecharCaminhao />
     // <EmbarcarCaminhao />
