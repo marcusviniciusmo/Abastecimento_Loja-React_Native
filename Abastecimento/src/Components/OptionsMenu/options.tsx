@@ -1,35 +1,35 @@
 import { SubOptionsMenuProps } from '../../pmenos-utils/types';
-import { title } from '../../Utils';
+import { title, routes, categoriaMenu } from '../../Utils';
 
 export const OptionsExpedicao: Array<SubOptionsMenuProps> = [{
         idOptions: 1,
         descricaoOptions: title.abrirCaminhao,
-        categoriaMenu: 'Expedição',
-        route: 'AbrirCaminhao',
+        categoriaMenu: categoriaMenu.expedicao,
+        route: routes.abrirCaminhao,
     },
     {
         idOptions: 2,
         descricaoOptions: title.montarCaminhao,
-        categoriaMenu: 'Expedição',
-        route: 'MontarCaminhao',
+        categoriaMenu: categoriaMenu.expedicao,
+        route: routes.montarCaminhao,
     },
     {
         idOptions: 3,
         descricaoOptions: title.fecharCaminhao,
-        categoriaMenu: 'Expedição',
-        route: 'FecharCaminhao',
+        categoriaMenu: categoriaMenu.expedicao,
+        route: routes.fecharCaminhao,
     },
     {
         idOptions: 4,
         descricaoOptions: title.embarcarCaminhao,
-        categoriaMenu: 'Expedição',
-        route: 'EmbarcarCaminhao',
+        categoriaMenu: categoriaMenu.expedicao,
+        route: routes.embarcarCaminhao,
     },
     {
         idOptions: 5,
         descricaoOptions: `${title.modificarPlaca} do Caminhão`,
-        categoriaMenu: 'Expedição',
-        route: 'ModificarPlacaDoCaminhao',
+        categoriaMenu: categoriaMenu.expedicao,
+        route: routes.modificarPlacaDoCaminhao,
     },
     {
         idOptions: 6,

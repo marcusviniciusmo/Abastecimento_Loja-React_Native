@@ -30,6 +30,21 @@ export const title = {
     volumesNaoEscaneados: 'Volumes Não Escaneados',
 };
 
+export const routes = {
+    abrirCaminhao: 'AbrirCaminhao',
+    embarcarCaminhao: 'EmbarcarCaminhao',
+    fecharCaminhao: 'FecharCaminhao',
+    login: 'Login',
+    menu: 'Menu',
+    modificarPlacaDoCaminhao: 'ModificarPlacaDoCaminhao',
+    montarCaminhao: 'MontarCaminhao',
+    primeirasConfiguracoes: 'PrimeirasConfiguracoes',
+};
+
+export const categoriaMenu = {
+    expedicao: 'Expedição',
+};
+
 export const featherIcons = {
     airplay: 'airplay',
     alertCircle: 'alert-circle',

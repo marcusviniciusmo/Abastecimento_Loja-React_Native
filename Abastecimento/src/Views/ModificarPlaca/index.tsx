@@ -4,8 +4,9 @@ import HeaderView from '../../Components/HeaderView';
 import Input from '../../Components/Input';
 import TipBottomView from '../../Components/TipBottomView';
 import { iconBack, settingsIcon, title, featherIcons, placeholder, tipText } from '../../Utils';
+import { NavigationProps } from '../../pmenos-utils/types';
 
-const ModificarPlaca: React.FC = () => {
+const ModificarPlaca: React.FC<NavigationProps> = ({ navigation }) => {
     const [placaAtualInput, setPlacaAtualInput] = useState('');
     const [novaPlacaInput, setNovaPlacaInput] = useState('');
 
@@ -15,6 +16,7 @@ const ModificarPlaca: React.FC = () => {
                 title={title.modificarPlaca}
                 iconBack={iconBack}
                 settings={settingsIcon}
+                goBack={() => navigation.goBack()}
             />
             <Container>
                 <Input

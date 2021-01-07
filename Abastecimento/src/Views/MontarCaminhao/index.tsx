@@ -7,8 +7,9 @@ import TagToInsert from '../../Components/TagToInsert';
 import { iconBack, settingsIcon, title, featherIcons, placeholder, tipText, titleAlertModal, alertText, textButtonAlert } from '../../Utils';
 import ButtonConfirm from '../../Components/ButtonConfirm';
 import ModalAlertaConfirmacao from '../../Components/ModalAlertaConfirmacao';
+import { NavigationProps } from '../../pmenos-utils/types';
 
-const MontarCaminhao: React.FC = () => {
+const MontarCaminhao: React.FC<NavigationProps> = ({ navigation }) => {
     const [placaVeiculoInput, setPlacaVeiculoInput] = useState('');
     const [numeroPedidoInput, setNumeroPedidoInput] = useState('');
     const [filialInput, setFilialInput] = useState('');
@@ -44,6 +45,7 @@ const MontarCaminhao: React.FC = () => {
                         title={title.montarCaminhao}
                         iconBack={iconBack}
                         settings={settingsIcon}
+                        goBack={() => navigation.goBack()}
                     />
                     <Container>
                         <Input

@@ -1,9 +1,5 @@
 import React from 'react';
 import Routes from './routes';
-import MontarCaminhao from './Views/MontarCaminhao';
-import FecharCaminhao from './Views/FecharCaminhao';
-import EmbarcarCaminhao from './Views/EmbarcarCaminhao';
-import ModificarPlaca from './Views/ModificarPlaca';
 import ForcarEncerramento from './Views/ForcarEncerramento';
 import ConsultarCaminhao from './Views/ConsultarCaminhao';
 import VolumesNaoEscaneados from './Views/VolumesNaoEscaneados';
@@ -23,10 +19,6 @@ import ModalAlertaConfirmacao from './Components/ModalAlertaConfirmacao';
 const App = () => {
   return (
     <Routes />
-    // <MontarCaminhao />
-    // <FecharCaminhao />
-    // <EmbarcarCaminhao />
-    // <ModificarPlaca />
     // <ForcarEncerramento />
     // <ConsultarCaminhao />
     // <VolumesNaoEscaneados />

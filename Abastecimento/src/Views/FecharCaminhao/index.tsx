@@ -6,8 +6,9 @@ import Input from '../../Components/Input';
 import ModalAlertaConfirmacao from '../../Components/ModalAlertaConfirmacao';
 import TipBottomView from '../../Components/TipBottomView';
 import { iconBack, settingsIcon, title, featherIcons, placeholder, tipText, titleAlertModal, alertText, textButtonAlert } from '../../Utils';
+import { NavigationProps } from '../../pmenos-utils/types';
 
-const FecharCaminhao: React.FC = () => {
+const FecharCaminhao: React.FC<NavigationProps> = ({ navigation }) => {
     const [placaVeiculoInput, setPlacaVeiculoInput] = useState('');
     const [showModal, setShowModal] = useState(false);
 
@@ -37,6 +38,7 @@ const FecharCaminhao: React.FC = () => {
                         title={title.fecharCaminhao}
                         iconBack={iconBack}
                         settings={settingsIcon}
+                        goBack={() => navigation.goBack()}
                     />
                     <Container>
                         <Input

@@ -6,8 +6,9 @@ import Input from '../../Components/Input';
 import ModalAlertaConfirmacao from '../../Components/ModalAlertaConfirmacao';
 import TipBottomView from '../../Components/TipBottomView';
 import { iconBack, settingsIcon, title, featherIcons, placeholder, tipText, titleAlertModal, alertText, textButtonAlert } from '../../Utils';
+import { NavigationProps } from '../../pmenos-utils/types';
 
-const EmbacarCaminhao: React.FC = () => {
+const EmbacarCaminhao: React.FC<NavigationProps> = ({ navigation }) => {
     const [placaVeiculoInput, setPlacaVeiculoInput] = useState('');
     const [manifestoCargaInput, setManifestoCargaInput] = useState('');
     const [showModal, setShowModal] = useState(false);
@@ -39,6 +40,7 @@ const EmbacarCaminhao: React.FC = () => {
                         title={title.embarcarCaminhao}
                         iconBack={iconBack}
                         settings={settingsIcon}
+                        goBack={() => navigation.goBack()}
                     />
                     <Container>
                         <Input
