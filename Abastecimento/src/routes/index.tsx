@@ -11,6 +11,7 @@ import MontarCaminhao from '../Views/MontarCaminhao';
 import FecharCaminhao from '../Views/FecharCaminhao';
 import EmbarcarCaminhao from '../Views/EmbarcarCaminhao';
 import ModificarPlaca from '../Views/ModificarPlaca';
+import ForcarEncerramento from '../Views/ForcarEncerramento';
 
 const Stack = createStackNavigator();
 
@@ -26,6 +27,7 @@ function Routes() {
                 <Stack.Screen name={routes.fecharCaminhao} component={FecharCaminhao}/>
                 <Stack.Screen name={routes.embarcarCaminhao} component={EmbarcarCaminhao} />
                 <Stack.Screen name={routes.modificarPlacaDoCaminhao} component={ModificarPlaca}/>
+                <Stack.Screen name={routes.forcarEncerramento} component={ForcarEncerramento}/>
             </Stack.Navigator>
         </NavigationContainer>
     )

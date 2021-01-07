@@ -34,8 +34,8 @@ export const OptionsExpedicao: Array<SubOptionsMenuProps> = [{
     {
         idOptions: 6,
         descricaoOptions: title.forcarEncerramento,
-        categoriaMenu: 'Expedição',
-        route: 'ForcarEncerramento',
+        categoriaMenu: categoriaMenu.expedicao,
+        route: routes.forcarEncerramento,
     },
     {
         idOptions: 7,

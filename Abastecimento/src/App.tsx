@@ -1,6 +1,5 @@
 import React from 'react';
 import Routes from './routes';
-import ForcarEncerramento from './Views/ForcarEncerramento';
 import ConsultarCaminhao from './Views/ConsultarCaminhao';
 import VolumesNaoEscaneados from './Views/VolumesNaoEscaneados';
 import FiliaisNaoEmbarcadas from './Views/FiliaisNaoEmbarcadas';
@@ -14,12 +13,10 @@ import CriarConferencia from './Views/CriarConferencia';
 import Conferir from './Views/Conferir';
 import ExcluirConferencia from './Views/ExcluirConferencia';
 import ModificarProdutoSemLote from './Views/ModificarProdutoSemLote';
-import ModalAlertaConfirmacao from './Components/ModalAlertaConfirmacao';
 
 const App = () => {
   return (
     <Routes />
-    // <ForcarEncerramento />
     // <ConsultarCaminhao />
     // <VolumesNaoEscaneados />
     // <FiliaisNaoEmbarcadas />
@@ -33,7 +30,6 @@ const App = () => {
     // <Conferir />
     // <ExcluirConferencia />
     // <ModificarProdutoSemLote />
-    // <ModalAlertaConfirmacao />
   )
 };
 

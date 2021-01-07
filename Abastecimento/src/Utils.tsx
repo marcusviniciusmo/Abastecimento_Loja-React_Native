@@ -34,6 +34,7 @@ export const routes = {
     abrirCaminhao: 'AbrirCaminhao',
     embarcarCaminhao: 'EmbarcarCaminhao',
     fecharCaminhao: 'FecharCaminhao',
+    forcarEncerramento: 'ForcarEncerramento',
     login: 'Login',
     menu: 'Menu',
     modificarPlacaDoCaminhao: 'ModificarPlacaDoCaminhao',
@@ -108,4 +109,5 @@ export const alertText = {
     caminhaoEmbarcadoSuccess: 'Caminhão embarcado com sucesso',
     caminhaoFechadoSuccess: 'Caminhão fechado com sucesso!',
     caminhaoMontadoSuccess: 'Caminhão montado com sucesso!',
+    placaModificadaSuccess: 'Placa modificada com sucesso!',
 }
