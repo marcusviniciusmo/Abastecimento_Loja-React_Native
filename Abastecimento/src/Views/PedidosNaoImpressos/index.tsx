@@ -5,10 +5,15 @@ import Input from '../../Components/Input';
 import TipBottomView from '../../Components/TipBottomView';
 import { title, iconBack, settingsIcon, featherIcons, placeholder, tipText } from '../../Utils';
 import { NavigationProps } from '../../pmenos-utils/types';
+import ButtonConfirm from '../../Components/ButtonConfirm';
 
 const PedidosNaoImpressos: React.FC<NavigationProps> = ({ navigation }) => {
     const [dataInput, setDataInput] = useState('');
     const [ruaInput, setRuaInput] = useState('');
+
+    const cleanInputValue = ((input: any) => {
+        input('');
+    });
 
     return (
         <ContainerPrincipal>
@@ -24,6 +29,9 @@ const PedidosNaoImpressos: React.FC<NavigationProps> = ({ navigation }) => {
                     icon={featherIcons.calendar}
                     placeholder={placeholder.data}
                     onChangeText={setDataInput}
+                    iconRight={dataInput ? featherIcons.x : ''}
+                    cleanInput={cleanInputValue.bind(this, setDataInput)}
+                    value={dataInput}
                     bordered
                 />
                 <Input
@@ -31,10 +39,17 @@ const PedidosNaoImpressos: React.FC<NavigationProps> = ({ navigation }) => {
                     icon={featherIcons.home}
                     placeholder={placeholder.rua}
                     onChangeText={setRuaInput}
+                    iconRight={ruaInput ? featherIcons.x : ''}
+                    cleanInput={cleanInputValue.bind(this, setRuaInput)}
+                    value={ruaInput}
                     bordered
                 />
             </Container>
-            <TipBottomView text={tipText.informe_Todos_Campos}/>
+            {
+                (dataInput && ruaInput)
+                    ? <ButtonConfirm>Buscar</ButtonConfirm>
+                    : <TipBottomView text={tipText.informe_Todos_Campos}/>
+            }            
         </ContainerPrincipal>
     )
 };

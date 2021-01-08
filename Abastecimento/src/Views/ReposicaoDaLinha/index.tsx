@@ -6,6 +6,7 @@ import TipBottomView from '../../Components/TipBottomView';
 import WarningSwitch from '../../Components/WarningSwitch';
 import { title, iconBack, settingsIcon, featherIcons, placeholder, tipText } from '../../Utils';
 import { NavigationProps } from '../../pmenos-utils/types';
+import ButtonConfirm from '../../Components/ButtonConfirm';
 
 const ReposicaoDaLinha: React.FC<NavigationProps> = ({ navigation }) => {
     const textWarning = 'Urgente';
@@ -21,6 +22,11 @@ const ReposicaoDaLinha: React.FC<NavigationProps> = ({ navigation }) => {
         setIsSwitchOn(!isSwitchOn);
     };
 
+    const cleanInputValue = ((input: any) => {
+        input('');
+        setIsSwitchOn(false);
+    });
+
     return (
         <ContainerPrincipal>
             <HeaderView
@@ -35,6 +41,9 @@ const ReposicaoDaLinha: React.FC<NavigationProps> = ({ navigation }) => {
                     icon={featherIcons.home}
                     placeholder={placeholder.endereco}
                     onChangeText={setEnderecoInput}
+                    iconRight={enderecoInput ? featherIcons.x : ''}
+                    cleanInput={cleanInputValue.bind(this, setEnderecoInput)}
+                    value={enderecoInput}
                     bordered
                 />
                 <WarningSwitch
@@ -43,7 +52,11 @@ const ReposicaoDaLinha: React.FC<NavigationProps> = ({ navigation }) => {
                     changeValueSwitch={changeValueSwitch}
                 />
             </Container>
-            <TipBottomView text={tipText.informe_Todos_Campos}/>
+            {
+                (enderecoInput !== '' && isSwitchOn)
+                    ? <ButtonConfirm>Finalizar</ButtonConfirm>
+                    : <TipBottomView text={tipText.informe_Todos_Campos}/>
+            }
         </ContainerPrincipal>
     )
 };

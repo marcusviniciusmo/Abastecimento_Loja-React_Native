@@ -5,11 +5,16 @@ import Input from '../../Components/Input';
 import TipBottomView from '../../Components/TipBottomView';
 import { iconBack, settingsIcon, title, featherIcons, placeholder, tipText } from '../../Utils';
 import { NavigationProps } from '../../pmenos-utils/types';
+import ButtonConfirm from '../../Components/ButtonConfirm';
 
 const VolumesNaoEscaneados: React.FC<NavigationProps> = ({ navigation }) => {
     const [placaVeiculoInput, setPlacaVeiculoInput] = useState('');
-    const [numeroPedidoInput, seNumeroPedidoInput] = useState('');
+    const [numeroPedidoInput, setNumeroPedidoInput] = useState('');
     const [filialInput, setFilialInput] = useState('');
+
+    const cleanInputValue = ((input: any) => {
+        input('');
+    });
 
     return (
         <ContainerPrincipal>
@@ -25,13 +30,19 @@ const VolumesNaoEscaneados: React.FC<NavigationProps> = ({ navigation }) => {
                     icon={featherIcons.truck}
                     placeholder={placeholder.placaVeiculo}
                     onChangeText={setPlacaVeiculoInput}
+                    iconRight={placaVeiculoInput ? featherIcons.x : ''}
+                    cleanInput={cleanInputValue.bind(this, setPlacaVeiculoInput)}
+                    value={placaVeiculoInput}
                     bordered
                 />
                 <Input
                     name='numero-pedido'
                     icon={featherIcons.hash}
                     placeholder={placeholder.numeroPedido}
-                    onChangeText={seNumeroPedidoInput}
+                    onChangeText={setNumeroPedidoInput}
+                    iconRight={numeroPedidoInput ? featherIcons.x : ''}
+                    cleanInput={cleanInputValue.bind(this, setNumeroPedidoInput)}
+                    value={numeroPedidoInput}
                     bordered
                 />
                 <Input
@@ -39,10 +50,17 @@ const VolumesNaoEscaneados: React.FC<NavigationProps> = ({ navigation }) => {
                     icon={featherIcons.home}
                     placeholder={placeholder.filial}
                     onChangeText={setFilialInput}
+                    iconRight={filialInput ? featherIcons.x : ''}
+                    cleanInput={cleanInputValue.bind(this, setFilialInput)}
+                    value={filialInput}
                     bordered
                 />
             </Container>
-            <TipBottomView text={tipText.informe_Todos_Campos} />
+            {
+                (placaVeiculoInput && numeroPedidoInput && filialInput)
+                    ? <ButtonConfirm>Buscar</ButtonConfirm>
+                    : <TipBottomView text={tipText.informe_Todos_Campos} />
+            }
         </ContainerPrincipal>
     )
 };

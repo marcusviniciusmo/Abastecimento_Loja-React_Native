@@ -7,10 +7,15 @@ import Input from '../../Components/Input';
 import TipBottomView from '../../Components/TipBottomView';
 import BarView from '../../Components/BarView';
 import { NavigationProps } from '../../pmenos-utils/types';
+import ButtonConfirm from '../../Components/ButtonConfirm';
 
 const ConsultarPedido: React.FC<NavigationProps> = ({ navigation }) => {
     const [dataDoPedidoInput, setDataDoPedidoInput] = useState('');
     const [ruaInput, setRuaInput] = useState('');
+
+    const cleanInputValue = ((input: any) => {
+        input('');
+    });
 
     return (
         <ContainerPrincipal>
@@ -26,6 +31,9 @@ const ConsultarPedido: React.FC<NavigationProps> = ({ navigation }) => {
                     icon={featherIcons.calendar}
                     placeholder={placeholder.dataPedido}
                     onChangeText={setDataDoPedidoInput}
+                    iconRight={dataDoPedidoInput ? featherIcons.x : ''}
+                    cleanInput={cleanInputValue.bind(this, setDataDoPedidoInput)}
+                    value={dataDoPedidoInput}
                     bordered
                 />
                 <Input
@@ -33,15 +41,22 @@ const ConsultarPedido: React.FC<NavigationProps> = ({ navigation }) => {
                     icon={featherIcons.home}
                     placeholder={placeholder.rua}
                     onChangeText={setRuaInput}
+                    iconRight={ruaInput ? featherIcons.x : ''}
+                    cleanInput={cleanInputValue.bind(this, setRuaInput)}
+                    value={ruaInput}
                     bordered
                 />
             </Container>
-            <TipBottomView
-                top='33'
-                text={tipText.informe_Todos_Campos}
-                inputAlign
-            />
-            <BarView text={'Resultados'}/>
+            {
+                (dataDoPedidoInput && ruaInput)
+                    ? <ButtonConfirm>Consultar</ButtonConfirm>
+                    : <TipBottomView
+                        top='33'
+                        text={tipText.informe_Todos_Campos}
+                        inputAlign
+                    />
+            }
+            <BarView text={'Resultados'} />
         </ContainerPrincipal>
     )
 };

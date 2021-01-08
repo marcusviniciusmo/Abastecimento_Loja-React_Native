@@ -5,9 +5,14 @@ import Input from '../../Components/Input';
 import TipBottomView from '../../Components/TipBottomView';
 import { iconBack, settingsIcon, title, featherIcons, placeholder, tipText } from '../../Utils';
 import { NavigationProps } from '../../pmenos-utils/types';
+import ButtonConfirm from '../../Components/ButtonConfirm';
 
 const ConsultarPorEndereco: React.FC<NavigationProps> = ({ navigation }) => {
     const [enderecoInput, setEnderecoInput] = useState('');
+
+    const cleanInputValue = ((input: any) => {
+        input('');
+    });
 
     return (
         <ContainerPrincipal>
@@ -23,10 +28,17 @@ const ConsultarPorEndereco: React.FC<NavigationProps> = ({ navigation }) => {
                     icon={featherIcons.home}
                     placeholder={placeholder.endereco}
                     onChangeText={setEnderecoInput}
+                    iconRight={enderecoInput ? featherIcons.x : ''}
+                    cleanInput={cleanInputValue.bind(this, setEnderecoInput)}
+                    value={enderecoInput}
                     bordered
                 />
             </Container>
-            <TipBottomView text={tipText.informe_Todos_Campos}/>
+            {
+                enderecoInput
+                    ? <ButtonConfirm>Buscar</ButtonConfirm>
+                    : <TipBottomView text={tipText.informe_Todos_Campos}/>
+            }
         </ContainerPrincipal>
     )
 };
