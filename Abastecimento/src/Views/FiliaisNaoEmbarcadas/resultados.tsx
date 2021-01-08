@@ -4,8 +4,9 @@ import { ContainerPrincipal, InitialCircle, ResultadoButton, TextCircle } from '
 import BarView from '../../Components/BarView';
 import HeaderView from '../../Components/HeaderView';
 import { featherIcons, iconBack, settingsIcon } from '../../Utils';
+import { NavigationProps } from '../../pmenos-utils/types';
 
-const ResultadosFiliaisNaoEmbarcadas: React.FC = ({ navigation, route}) => {
+const ResultadosFiliaisNaoEmbarcadas: React.FC<NavigationProps> = ({ navigation, route}) => {
 
     const filiais = [{
         id: 1,

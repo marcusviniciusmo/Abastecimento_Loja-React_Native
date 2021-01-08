@@ -29,6 +29,7 @@ import ResultadosConsultarCaminhao from '../Views/ConsultarCaminhao/resultados';
 import ResultadosVolumesNaoEscaneados from '../Views/VolumesNaoEscaneados/resultados';
 import ResutadosFiliaisNaoEmbarcadas from '../Views/FiliaisNaoEmbarcadas/resultados';
 import ResultadosConsultarPorCodigoDeBarras from '../Views/ConsultarPorCodigoDeBarras/resultados';
+import ResultadosConsultarPorEndereco from '../Views/ConsultarPorEndereco/resultados';
 
 const Stack = createStackNavigator();
 
@@ -49,11 +50,9 @@ function Routes() {
                 <Stack.Screen name={routes.consultarCaminhao} component={ConsultarCaminhao}/>
                 <Stack.Screen name={routes.volumesNaoEscaneados} component={VolumesNaoEscaneados}/>
                 <Stack.Screen name={routes.filiaisNaoEmbarcadas} component={FiliaisNaoEmbarcadas} />
-
                 <Stack.Screen name={routes.resultadosConsultarCaminhao} component={ResultadosConsultarCaminhao}/>
                 <Stack.Screen name={routes.resultadosVolumesNaoEscaneados} component={ResultadosVolumesNaoEscaneados}/>
                 <Stack.Screen name={routes.resultadosFiliaisNaoEmbarcadas} component={ResutadosFiliaisNaoEmbarcadas}/>
-                <Stack.Screen name={routes.resultadosConsultarPorCodigoDeBarras} component={ResultadosConsultarPorCodigoDeBarras}/>
 
                 <Stack.Screen name={routes.consultarPorCodigoDeBarras} component={ConsultarPorCodigoDeBarras} />
                 <Stack.Screen name={routes.consultarPorEndereco} component={ConsultarPorEndereco}/>
@@ -61,6 +60,9 @@ function Routes() {
                 <Stack.Screen name={routes.reposicaoDaLinha} component={ReposicaoDaLinha}/>
                 <Stack.Screen name={routes.finalizarReposicao} component={FinalizarReposicao}/>
                 <Stack.Screen name={routes.consultarPedido} component={ConsultarPedido} />
+                <Stack.Screen name={routes.resultadosConsultarPorCodigoDeBarras} component={ResultadosConsultarPorCodigoDeBarras}/>
+                <Stack.Screen name={routes.resultadosConsultarPorEndereco} component={ResultadosConsultarPorEndereco}/>
+
                 <Stack.Screen name={routes.criarConferencia} component={CriarConferencia}/>
                 <Stack.Screen name={routes.conferir} component={Conferir}/>
                 <Stack.Screen name={routes.excluirConferencia} component={ExcluirConferencia}/>

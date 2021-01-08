@@ -1,11 +1,11 @@
 import React from 'react';
-import Icon from 'react-native-vector-icons/Feather';
 import { ContainerPrincipal, InitialCircle, ResultadoButton, TextCircle, TextExposed } from '../../AppStyles';
 import BarView from '../../Components/BarView';
 import HeaderView from '../../Components/HeaderView';
 import { iconBack, settingsIcon } from '../../Utils';
+import { NavigationProps } from '../../pmenos-utils/types';
 
-const ResultadosConsultarPorCodigoDeBarras: React.FC = ({ navigation, route }) => {
+const ResultadosConsultarPorCodigoDeBarras: React.FC<NavigationProps> = ({ navigation, route }) => {
     return (
         <ContainerPrincipal>
             <HeaderView

@@ -3,7 +3,7 @@ import { Container, ContainerPrincipal } from '../../AppStyles';
 import HeaderView from '../../Components/HeaderView';
 import Input from '../../Components/Input';
 import TipBottomView from '../../Components/TipBottomView';
-import { iconBack, settingsIcon, title, featherIcons, placeholder, tipText } from '../../Utils';
+import { iconBack, settingsIcon, title, featherIcons, placeholder, tipText, routes } from '../../Utils';
 import { NavigationProps } from '../../pmenos-utils/types';
 import ButtonConfirm from '../../Components/ButtonConfirm';
 
@@ -13,6 +13,10 @@ const ConsultarPorEndereco: React.FC<NavigationProps> = ({ navigation }) => {
     const cleanInputValue = ((input: any) => {
         input('');
     });
+
+    const mostrarResultados = () => {
+        navigation.navigate(routes.resultadosConsultarPorEndereco)
+    };
 
     return (
         <ContainerPrincipal>
@@ -36,7 +40,7 @@ const ConsultarPorEndereco: React.FC<NavigationProps> = ({ navigation }) => {
             </Container>
             {
                 enderecoInput
-                    ? <ButtonConfirm>Buscar</ButtonConfirm>
+                    ? <ButtonConfirm onPress={mostrarResultados}>Buscar</ButtonConfirm>
                     : <TipBottomView text={tipText.informe_Todos_Campos}/>
             }
         </ContainerPrincipal>
