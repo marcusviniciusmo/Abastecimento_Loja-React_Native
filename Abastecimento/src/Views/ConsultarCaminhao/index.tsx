@@ -15,7 +15,7 @@ const ConsultarCaminhao: React.FC<NavigationProps> = ({ navigation }) => {
     });
 
     const mostrarResultados = () => {
-        navigation.navigate(routes.resultadosConsultarcaminhao, placaVeiculoInput);
+        navigation.navigate(routes.resultadosConsultarCaminhao, placaVeiculoInput);
     };
 
     return (

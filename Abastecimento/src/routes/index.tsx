@@ -28,6 +28,7 @@ import ModificarProdutoSemLote from '../Views/ModificarProdutoSemLote';
 import ResultadosConsultarCaminhao from '../Views/ConsultarCaminhao/resultados';
 import ResultadosVolumesNaoEscaneados from '../Views/VolumesNaoEscaneados/resultados';
 import ResutadosFiliaisNaoEmbarcadas from '../Views/FiliaisNaoEmbarcadas/resultados';
+import ResultadosConsultarPorCodigoDeBarras from '../Views/ConsultarPorCodigoDeBarras/resultados';
 
 const Stack = createStackNavigator();
 
@@ -49,9 +50,10 @@ function Routes() {
                 <Stack.Screen name={routes.volumesNaoEscaneados} component={VolumesNaoEscaneados}/>
                 <Stack.Screen name={routes.filiaisNaoEmbarcadas} component={FiliaisNaoEmbarcadas} />
 
-                <Stack.Screen name={routes.resultadosConsultarcaminhao} component={ResultadosConsultarCaminhao}/>
+                <Stack.Screen name={routes.resultadosConsultarCaminhao} component={ResultadosConsultarCaminhao}/>
                 <Stack.Screen name={routes.resultadosVolumesNaoEscaneados} component={ResultadosVolumesNaoEscaneados}/>
                 <Stack.Screen name={routes.resultadosFiliaisNaoEmbarcadas} component={ResutadosFiliaisNaoEmbarcadas}/>
+                <Stack.Screen name={routes.resultadosConsultarPorCodigoDeBarras} component={ResultadosConsultarPorCodigoDeBarras}/>
 
                 <Stack.Screen name={routes.consultarPorCodigoDeBarras} component={ConsultarPorCodigoDeBarras} />
                 <Stack.Screen name={routes.consultarPorEndereco} component={ConsultarPorEndereco}/>

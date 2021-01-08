@@ -3,16 +3,27 @@ import { ContainerPrincipal, Container } from '../../AppStyles';
 import HeaderView from '../../Components/HeaderView';
 import Input from '../../Components/Input';
 import TipBottomView from '../../Components/TipBottomView';
-import { iconBack, settingsIcon, title, featherIcons, placeholder, tipText } from '../../Utils';
+import { iconBack, settingsIcon, title, featherIcons, placeholder, tipText, routes } from '../../Utils';
 import { NavigationProps } from '../../pmenos-utils/types';
 import ButtonConfirm from '../../Components/ButtonConfirm';
 
-const ConsultarPorCodigoDeBarras: React.FC<NavigationProps> = ({ navigation }) => {    
+const ConsultarPorCodigoDeBarras: React.FC<NavigationProps> = ({ navigation }) => {
     const[codigoDeBarrasInput, setCodigoDeBarrasInput] = useState('');
+
+    const produto = {
+        id: 1,
+        descricao: 'AQUACLIN ANTIACNE SAB 90G',
+        codigoBarras: codigoDeBarrasInput,
+        categoria: 'M17.001.002.002',
+    };
 
     const cleanInputValue = ((input: any) => {
         input('');
     });
+
+    const mostrarResultados = () => {
+        navigation.navigate(routes.resultadosConsultarPorCodigoDeBarras, produto)
+    };
 
     return (
         <ContainerPrincipal>
@@ -36,7 +47,7 @@ const ConsultarPorCodigoDeBarras: React.FC<NavigationProps> = ({ navigation }) =
             </Container>
             {
                 codigoDeBarrasInput
-                    ? <ButtonConfirm>Buscar</ButtonConfirm>
+                    ? <ButtonConfirm onPress={mostrarResultados}>Buscar</ButtonConfirm>
                     : <TipBottomView text={tipText.informe_Todos_Campos}/>
             }
         </ContainerPrincipal>
