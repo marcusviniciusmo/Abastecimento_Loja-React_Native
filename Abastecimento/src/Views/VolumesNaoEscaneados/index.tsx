@@ -50,6 +50,7 @@ const VolumesNaoEscaneados: React.FC<NavigationProps> = ({ navigation }) => {
                     icon={featherIcons.hash}
                     placeholder={placeholder.numeroPedido}
                     onChangeText={setNumeroPedidoInput}
+                    keyboardType={'numeric'}
                     iconRight={numeroPedidoInput ? featherIcons.x : ''}
                     cleanInput={cleanInputValue.bind(this, setNumeroPedidoInput)}
                     value={numeroPedidoInput}
@@ -60,6 +61,7 @@ const VolumesNaoEscaneados: React.FC<NavigationProps> = ({ navigation }) => {
                     icon={featherIcons.home}
                     placeholder={placeholder.filial}
                     onChangeText={setFilialInput}
+                    keyboardType={'numeric'}
                     iconRight={filialInput ? featherIcons.x : ''}
                     cleanInput={cleanInputValue.bind(this, setFilialInput)}
                     value={filialInput}

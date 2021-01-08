@@ -54,6 +54,7 @@ export const routes = {
     reposicaoDaLinha: 'ReposicaoDaLinha',
     resultadosConsultarcaminhao: 'ResultadosConsultarCaminhao',
     resultadosVolumesNaoEscaneados: 'ResultadosVolumesNaoEscaneados',
+    resultadosFiliaisNaoEmbarcadas: 'ResultadosFiliaisNaoEmbarcadas',
     volumesNaoEscaneados: 'volumesNaoEscaneados',
 };
 

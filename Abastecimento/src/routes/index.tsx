@@ -27,6 +27,7 @@ import ExcluirConferencia from '../Views/ExcluirConferencia';
 import ModificarProdutoSemLote from '../Views/ModificarProdutoSemLote';
 import ResultadosConsultarCaminhao from '../Views/ConsultarCaminhao/resultados';
 import ResultadosVolumesNaoEscaneados from '../Views/VolumesNaoEscaneados/resultados';
+import ResutadosFiliaisNaoEmbarcadas from '../Views/FiliaisNaoEmbarcadas/resultados';
 
 const Stack = createStackNavigator();
 
@@ -50,6 +51,7 @@ function Routes() {
 
                 <Stack.Screen name={routes.resultadosConsultarcaminhao} component={ResultadosConsultarCaminhao}/>
                 <Stack.Screen name={routes.resultadosVolumesNaoEscaneados} component={ResultadosVolumesNaoEscaneados}/>
+                <Stack.Screen name={routes.resultadosFiliaisNaoEmbarcadas} component={ResutadosFiliaisNaoEmbarcadas}/>
 
                 <Stack.Screen name={routes.consultarPorCodigoDeBarras} component={ConsultarPorCodigoDeBarras} />
                 <Stack.Screen name={routes.consultarPorEndereco} component={ConsultarPorEndereco}/>
