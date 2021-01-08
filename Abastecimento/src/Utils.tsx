@@ -32,18 +32,36 @@ export const title = {
 
 export const routes = {
     abrirCaminhao: 'AbrirCaminhao',
+    conferir: 'Conferir',
+    consultarCaminhao: 'ConsultarCaminhao',
+    consultarPedido: 'ConsultarPedido',
+    consultarPorCodigoDeBarras: 'ConsultarPorCodigoDeBarras',
+    consultarPorEndereco: 'ConsultarPorEndereco',
+    criarConferencia: 'CriarConferencia',
     embarcarCaminhao: 'EmbarcarCaminhao',
+    excluirConferencia: 'ExcluirConferencia',
     fecharCaminhao: 'FecharCaminhao',
+    filiaisNaoEmbarcadas: 'FiliaisNaoEmbarcadas',
+    finalizarReposicao: 'FinalizarReposicao',
     forcarEncerramento: 'ForcarEncerramento',
     login: 'Login',
     menu: 'Menu',
     modificarPlacaDoCaminhao: 'ModificarPlacaDoCaminhao',
+    modificarProdutoSemLote: 'ModificarProdutoSemLote',
     montarCaminhao: 'MontarCaminhao',
+    pedidosNaoImpressos: 'PedidosNaoImpressos',
     primeirasConfiguracoes: 'PrimeirasConfiguracoes',
+    reposicaoDaLinha: 'ReposicaoDaLinha',
+    volumesNaoEscaneados: 'volumesNaoEscaneados',
 };
 
 export const categoriaMenu = {
+    armazenamento: 'Armazenamento',
+    configuracoes: 'Configurações',
+    descarregamento: 'Descarregamento',
+    entradaDeMercadorias: 'Entrada de Mercadorias',
     expedicao: 'Expedição',
+    reposicao: 'Reposição',
 };
 
 export const featherIcons = {

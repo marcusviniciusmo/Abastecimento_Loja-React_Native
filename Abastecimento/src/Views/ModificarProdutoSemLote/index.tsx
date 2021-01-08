@@ -4,8 +4,9 @@ import HeaderView from '../../Components/HeaderView';
 import Input from '../../Components/Input';
 import TipBottomView from '../../Components/TipBottomView';
 import { title, iconBack, settingsIcon, featherIcons, placeholder, tipText } from '../../Utils';
+import { NavigationProps } from '../../pmenos-utils/types';
 
-const ModificarProdutoSemLote: React.FC = () => {
+const ModificarProdutoSemLote: React.FC<NavigationProps> = ({ navigation }) => {
     const [identicadorConferenciaInput, setIdenticadorConferenciaInput] = useState('');
     const [sequencialNotaInput, setSequencialNotaInput] = useState('');
     const [codigoDeBarrasInput, setCodigoDeBarrasInput] = useState('');
@@ -16,6 +17,7 @@ const ModificarProdutoSemLote: React.FC = () => {
                 title={title.modificarProdutoSemLote}
                 iconBack={iconBack}
                 settings={settingsIcon}
+                goBack={() => navigation.goBack()}
             />
             <Container>
                 <Input

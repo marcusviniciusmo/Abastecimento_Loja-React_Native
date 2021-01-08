@@ -4,8 +4,9 @@ import HeaderView from '../../Components/HeaderView';
 import { title, iconBack, settingsIcon, featherIcons, placeholder, tipText } from '../../Utils';
 import Input from '../../Components/Input';
 import TipBottomView from '../../Components/TipBottomView';
+import { NavigationProps } from '../../pmenos-utils/types';
 
-const FinalizarReposicao: React.FC = () => {
+const FinalizarReposicao: React.FC<NavigationProps> = ({ navigation }) => {
     const [identificadorDaReposicaoInput, setIdentificadorDaReposicaoInput] = useState('');
 
     return (
@@ -14,6 +15,7 @@ const FinalizarReposicao: React.FC = () => {
                 title={title.finalizarReposicao}
                 iconBack={iconBack}
                 settings={settingsIcon}
+                goBack={() => navigation.goBack()}
             />
             <Container>
                 <Input

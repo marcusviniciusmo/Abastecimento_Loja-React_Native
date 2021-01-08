@@ -6,8 +6,9 @@ import { title, iconBack, settingsIcon, featherIcons, placeholder, tipText } fro
 import Input from '../../Components/Input';
 import TipBottomView from '../../Components/TipBottomView';
 import BarView from '../../Components/BarView';
+import { NavigationProps } from '../../pmenos-utils/types';
 
-const ConsultarPedido: React.FC = () => {
+const ConsultarPedido: React.FC<NavigationProps> = ({ navigation }) => {
     const [dataDoPedidoInput, setDataDoPedidoInput] = useState('');
     const [ruaInput, setRuaInput] = useState('');
 
@@ -17,6 +18,7 @@ const ConsultarPedido: React.FC = () => {
                 title={title.consultarPedido}
                 iconBack={iconBack}
                 settings={settingsIcon}
+                goBack={() => navigation.goBack()}
             />
             <Container>
                 <Input

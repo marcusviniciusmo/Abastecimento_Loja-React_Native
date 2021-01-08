@@ -5,8 +5,9 @@ import Input from '../../Components/Input';
 import TipBottomView from '../../Components/TipBottomView';
 import WarningSwitch from '../../Components/WarningSwitch';
 import { title, iconBack, settingsIcon, featherIcons, placeholder, tipText } from '../../Utils';
+import { NavigationProps } from '../../pmenos-utils/types';
 
-const ReposicaoDaLinha: React.FC = () => {
+const ReposicaoDaLinha: React.FC<NavigationProps> = ({ navigation }) => {
     const textWarning = 'Urgente';
 
     const [enderecoInput, setEnderecoInput] = useState('');
@@ -26,6 +27,7 @@ const ReposicaoDaLinha: React.FC = () => {
                 title={title.reposicaoDaLinha}
                 iconBack={iconBack}
                 settings={settingsIcon}
+                goBack={() => navigation.goBack()}
             />
             <Container>
                 <Input

@@ -4,8 +4,9 @@ import HeaderView from '../../Components/HeaderView';
 import Input from '../../Components/Input';
 import TipBottomView from '../../Components/TipBottomView';
 import { iconBack, settingsIcon, title, featherIcons, placeholder, tipText } from '../../Utils';
+import { NavigationProps } from '../../pmenos-utils/types';
 
-const ConsultarPorCodigoDeBarras: React.FC = () => {    
+const ConsultarPorCodigoDeBarras: React.FC<NavigationProps> = ({ navigation }) => {    
     const[codigoDeBarrasInput, setCodigoDeBarrasInput] = useState('');
 
     return (
@@ -14,6 +15,7 @@ const ConsultarPorCodigoDeBarras: React.FC = () => {
                 title={title.consultarPorCodigoDeBarras}
                 iconBack={iconBack}
                 settings={settingsIcon}
+                goBack={() => navigation.goBack()}
             />
             <Container>
                 <Input

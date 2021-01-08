@@ -4,8 +4,9 @@ import HeaderView from '../../Components/HeaderView';
 import Input from '../../Components/Input';
 import TipBottomView from '../../Components/TipBottomView';
 import { iconBack, settingsIcon, title, featherIcons, placeholder, tipText } from '../../Utils';
+import { NavigationProps } from '../../pmenos-utils/types';
 
-const FiliaisNaoEmbarcadas: React.FC = () => {
+const FiliaisNaoEmbarcadas: React.FC<NavigationProps> = ({ navigation }) => {
     const [numeroPedidoInput, setNumeroPedidoInput] = useState('');
 
     return (
@@ -14,6 +15,7 @@ const FiliaisNaoEmbarcadas: React.FC = () => {
                 title={title.filiaisNaoEmbarcadas}
                 iconBack={iconBack}
                 settings={settingsIcon}
+                goBack={() => navigation.goBack()}
             />
             <Container>
                 <Input

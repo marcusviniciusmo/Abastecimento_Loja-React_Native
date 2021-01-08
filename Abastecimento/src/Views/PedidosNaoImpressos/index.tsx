@@ -4,8 +4,9 @@ import HeaderView from '../../Components/HeaderView';
 import Input from '../../Components/Input';
 import TipBottomView from '../../Components/TipBottomView';
 import { title, iconBack, settingsIcon, featherIcons, placeholder, tipText } from '../../Utils';
+import { NavigationProps } from '../../pmenos-utils/types';
 
-const PedidosNaoImpressos: React.FC = () => {
+const PedidosNaoImpressos: React.FC<NavigationProps> = ({ navigation }) => {
     const [dataInput, setDataInput] = useState('');
     const [ruaInput, setRuaInput] = useState('');
 
@@ -15,6 +16,7 @@ const PedidosNaoImpressos: React.FC = () => {
                 title={title.pedidosNaoImpressos}
                 iconBack={iconBack}
                 settings={settingsIcon}
+                goBack={() => navigation.goBack()}
             />
             <Container>
                 <Input

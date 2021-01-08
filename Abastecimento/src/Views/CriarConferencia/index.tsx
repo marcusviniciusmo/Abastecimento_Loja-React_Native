@@ -4,8 +4,9 @@ import HeaderView from '../../Components/HeaderView';
 import Input from '../../Components/Input';
 import TipBottomView from '../../Components/TipBottomView';
 import { title, iconBack, settingsIcon, featherIcons, placeholder, tipText } from '../../Utils';
+import { NavigationProps } from '../../pmenos-utils/types';
 
-const CriarConferencia: React.FC = () => {
+const CriarConferencia: React.FC<NavigationProps> = ({ navigation }) => {
     const [identificadorConferenciaInput, setIdentificadorConferenciaInput] = useState('');
 
     return (
@@ -14,6 +15,7 @@ const CriarConferencia: React.FC = () => {
                 title={title.criarConferencia}
                 iconBack={iconBack}
                 settings={settingsIcon}
+                goBack={() => navigation.goBack()}
             />
             <Container>
                 <Input

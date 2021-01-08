@@ -7,8 +7,9 @@ import { title, iconBack, settingsIcon, featherIcons, placeholder, tipText } fro
 import TipBottomView from '../../Components/TipBottomView';
 import BarView from '../../Components/BarView';
 import Card from '../../Components/Card';
+import { NavigationProps } from '../../pmenos-utils/types';
 
-const Conferir: React.FC = () => {
+const Conferir: React.FC<NavigationProps> = ({ navigation }) => {
     const [codigoDeBarrasInput, setCodigoDeBarrasInput] = useState('');
 
     return (
@@ -17,6 +18,7 @@ const Conferir: React.FC = () => {
                 title={title.conferir}
                 iconBack={iconBack}
                 settings={settingsIcon}
+                goBack={() => navigation.goBack()}
             />
             <Container>
                 <Input

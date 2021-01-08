@@ -4,8 +4,9 @@ import HeaderView from '../../Components/HeaderView';
 import Input from '../../Components/Input';
 import TipBottomView from '../../Components/TipBottomView';
 import { iconBack, settingsIcon, title, featherIcons, placeholder, tipText } from '../../Utils';
+import { NavigationProps } from '../../pmenos-utils/types';
 
-const ConsultarCaminhao: React.FC = () => {
+const ConsultarCaminhao: React.FC<NavigationProps> = ({ navigation }) => {
     const [placaVeiculoInput, setPlacaVeiculoInput] = useState('');
 
     return (
@@ -14,6 +15,7 @@ const ConsultarCaminhao: React.FC = () => {
                 title={title.consultarCaminhao}
                 iconBack={iconBack}
                 settings={settingsIcon}
+                goBack={() => navigation.goBack()}
             />
             <Container>
                 <Input
