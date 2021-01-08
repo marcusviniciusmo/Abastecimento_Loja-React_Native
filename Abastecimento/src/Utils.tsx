@@ -53,6 +53,7 @@ export const routes = {
     primeirasConfiguracoes: 'PrimeirasConfiguracoes',
     reposicaoDaLinha: 'ReposicaoDaLinha',
     resultadosConsultarcaminhao: 'ResultadosConsultarCaminhao',
+    resultadosVolumesNaoEscaneados: 'ResultadosVolumesNaoEscaneados',
     volumesNaoEscaneados: 'volumesNaoEscaneados',
 };
 
@@ -78,6 +79,7 @@ export const featherIcons = {
     home: 'home',
     layers: 'layers',
     lock: 'lock',
+    package: 'package',
     plus: 'plus',
     settings: 'settings',
     truck: 'truck',

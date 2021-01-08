@@ -3,7 +3,7 @@ import { ContainerPrincipal, Container } from '../../AppStyles';
 import HeaderView from '../../Components/HeaderView';
 import Input from '../../Components/Input';
 import TipBottomView from '../../Components/TipBottomView';
-import { iconBack, settingsIcon, title, featherIcons, placeholder, tipText } from '../../Utils';
+import { iconBack, settingsIcon, title, featherIcons, placeholder, tipText, routes } from '../../Utils';
 import { NavigationProps } from '../../pmenos-utils/types';
 import ButtonConfirm from '../../Components/ButtonConfirm';
 
@@ -15,6 +15,16 @@ const VolumesNaoEscaneados: React.FC<NavigationProps> = ({ navigation }) => {
     const cleanInputValue = ((input: any) => {
         input('');
     });
+
+    const mostrarResultados = () => {
+        const volumeNaoEscaneado = {
+            placaVeiculoInput: placaVeiculoInput,
+            numeroPedidoInput: numeroPedidoInput,
+            filialInput: filialInput
+        };
+
+        navigation.navigate(routes.resultadosVolumesNaoEscaneados, volumeNaoEscaneado)
+    }
 
     return (
         <ContainerPrincipal>
@@ -58,7 +68,7 @@ const VolumesNaoEscaneados: React.FC<NavigationProps> = ({ navigation }) => {
             </Container>
             {
                 (placaVeiculoInput && numeroPedidoInput && filialInput)
-                    ? <ButtonConfirm>Buscar</ButtonConfirm>
+                    ? <ButtonConfirm onPress={mostrarResultados.bind(this)}>Buscar</ButtonConfirm>
                     : <TipBottomView text={tipText.informe_Todos_Campos} />
             }
         </ContainerPrincipal>
