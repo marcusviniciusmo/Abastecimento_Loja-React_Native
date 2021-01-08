@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ContainerPrincipal, CentroDistribuicaoButton, InitialCircle, TextCircle, TextExposed } from '../../AppStyles';
+import { ContainerPrincipal, ResultadoButton, InitialCircle, TextCircle, TextExposed } from '../../AppStyles';
 import HeaderView from '../../Components/HeaderView';
 import BarView from '../../Components/BarView';
 import TipBottomView from '../../Components/TipBottomView';
@@ -81,15 +81,15 @@ const PrimeiroAcesso: React.FC<NavigationProps> = ({ navigation }) => {
                             {
                                 cds.map((cd) => {
                                     return (
-                                        <CentroDistribuicaoButton key={cd.idCD}
+                                        <ResultadoButton key={cd.idCD}
                                                 onPress={() => selecionarCD(cd.idCD)}
-                                                cd={cd.idCD}
-                                                cdSelected={getCDSelected()}>
-                                            <InitialCircle cd={cd.idCD} cdSelected={getCDSelected()}>
-                                                <TextCircle cd={cd.idCD} cdSelected={getCDSelected()}>{cd.idCD}</TextCircle>
+                                                option={cd.idCD}
+                                                Selected={getCDSelected()}>
+                                            <InitialCircle option={cd.idCD} Selected={getCDSelected()}>
+                                                <TextCircle option={cd.idCD} Selected={getCDSelected()}>{cd.idCD}</TextCircle>
                                             </InitialCircle>
-                                            <TextExposed cd={cd.idCD} cdSelected={getCDSelected()}>{cd.nomeFantasiaCD}</TextExposed>
-                                        </CentroDistribuicaoButton>
+                                            <TextExposed option={cd.idCD} Selected={getCDSelected()}>{cd.nomeFantasiaCD}</TextExposed>
+                                        </ResultadoButton>
                                     )
                                 })
                             }

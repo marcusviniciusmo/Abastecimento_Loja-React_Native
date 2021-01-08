@@ -10,44 +10,46 @@ export const Container = styled.View`
     padding: 30px;
 `;
 
-export const CentroDistribuicaoButton = styled.TouchableOpacity.attrs((cd: number, cdSelected: number) => {
-  cd
-  cdSelected
+export const ResultadoButton = styled.TouchableOpacity.attrs((option: number, Selected: number) => {
+  option
+  Selected
 })`
   padding: 15px 20px 15px 80px;
   min-height: 80px;
   border: solid;
   border-color: #f5f5f5;
-  background-color: ${({ cd, cdSelected }: any) => cd === cdSelected ? '#0054A6' : '#fff'};
+  background-color: ${({ option, Selected }: any) => option === Selected && Selected ? '#0054A6' : '#fff'};
 `;
 
-export const InitialCircle = styled.View.attrs((cd: number, cdSelected: number) => {
-  cd
-  cdSelected
+export const InitialCircle = styled.View.attrs((option: number, Selected: number) => {
+  option
+  Selected
 })`
   position: absolute;
   top: 10px;
   left: 20px;
-  background-color: ${({ cd, cdSelected }: any) => cd === cdSelected ? '#11406D' : '#efefef'};
+  margin-top: 10px;
+  background-color: ${({ option, Selected }: any) => option === Selected && Selected ? '#11406D' : '#efefef'};
   padding: 10px;
   width: 50px;
   height: 50px;
   border-radius: 50px;
 `;
 
-export const TextCircle = styled.Text.attrs((cd: number, cdSelected: number) => {
-  cd
-  cdSelected
+export const TextCircle = styled.Text.attrs((option: number, Selected: number) => {
+  option
+  Selected
 })`
-  color: ${({ cd, cdSelected }: any) => cd === cdSelected ? '#fff' : '#555'};
+  color: ${({ option, Selected }: any) => option === Selected && Selected ? '#fff' : '#555'};
   font-size: 12px;
   margin: auto;
 `;
 
-export const TextExposed = styled.Text.attrs((cd: number, cdSelected: number) => {
-  cd
-  cdSelected
+
+export const TextExposed = styled.Text.attrs((option: number, Selected: number) => {
+  option
+  Selected
 })`
-  color: ${({ cd, cdSelected }: any) => cd === cdSelected ? '#fff' : '#333'};
+  color: ${({ option, Selected }: any) => option === Selected && Selected ? '#fff' : '#333'};
   margin-top: 10px;
 `;

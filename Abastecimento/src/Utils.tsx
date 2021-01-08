@@ -52,6 +52,7 @@ export const routes = {
     pedidosNaoImpressos: 'PedidosNaoImpressos',
     primeirasConfiguracoes: 'PrimeirasConfiguracoes',
     reposicaoDaLinha: 'ReposicaoDaLinha',
+    resultadosConsultarcaminhao: 'ResultadosConsultarCaminhao',
     volumesNaoEscaneados: 'volumesNaoEscaneados',
 };
 
